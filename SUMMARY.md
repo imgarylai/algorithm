@@ -134,6 +134,7 @@
 * [String](problems/string/README.md)
   * [344. Reverse String](problems/string/reverse-string.md)
   * [726. Number of Atoms](problems/string/number-of-atoms.md)
+  * [8. String to Integer \(atoi\)](problems/string/string-to-integer-atoi.md)
 * [Tree](problems/tree/README.md)
   * [200. Number of Islands](problems/tree/number-of-islands.md)
   * [286. Walls and Gates](problems/tree/walls-and-gates.md)
