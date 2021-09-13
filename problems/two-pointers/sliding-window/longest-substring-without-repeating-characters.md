@@ -2,26 +2,26 @@
 
 [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 
-這一題其實是可以透過暴力解法想辦法算出來的，那就是窮舉出所有的子字串，並且檢查每一個子字串有沒有重複的字元。
+這一題其實是可以透過暴力解法想辦法算出來的，那就是窮舉出所有的子字串，並且檢查每一個子字串有沒有重複的字元。時間複雜度約為 $$O(n^3) $$ 。
 
 ```python
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         def check(start, end):
-            chars = [0] * 128
+            chars = defaultdict(int)
             for i in range(start, end + 1):
                 c = s[i]
-                chars[ord(c)] += 1
-                if chars[ord(c)] > 1:
+                chars[c] += 1
+                if chars[c] > 1:
                     return False
             return True
 
         n = len(s)
 
         res = 0
-        for i in range(n):
-            for j in range(i, n):
-                if check(i, j):
+        for start in range(n):
+            for end in range(start, n):
+                if check(start, end):
                     res = max(res, j - i + 1)
         return res
 ```
@@ -46,17 +46,20 @@ class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         left = 0
         right = 0
-        visited = defaultdict(int)
         res = 0
+        visited = defaultdict(int)
+
         while right < len(s):
             char = s[right]
             right += 1
             visited[char] += 1
+
             while visited[char] > 1:
                 d = s[left]
                 left += 1
                 visited[d] -= 1
             res = max(res, right - left)
+
         return res
 ```
 
