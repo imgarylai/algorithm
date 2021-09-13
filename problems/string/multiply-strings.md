@@ -12,8 +12,6 @@ class Solution:
 
 不過這個題目其實考的是一個很常見的字串轉換的題目，題目給定的輸入，也可以是兩組陣列，回傳結果也是一個陣列。
 
-
-
 ```python
 class Solution:
     def toNum(self, s: str) -> int:
