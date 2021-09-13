@@ -132,6 +132,7 @@
   * [394. Decode String](problems/stack/394.-decode-string.md)
   * [84. Largest Rectangle in Histogram](problems/stack/84.-largest-rectangle-in-histogram.md)
 * [String](problems/string/README.md)
+  * [43. Multiply Strings](problems/string/multiply-strings.md)
   * [344. Reverse String](problems/string/reverse-string.md)
   * [726. Number of Atoms](problems/string/number-of-atoms.md)
   * [8. String to Integer \(atoi\)](problems/string/string-to-integer-atoi.md)
