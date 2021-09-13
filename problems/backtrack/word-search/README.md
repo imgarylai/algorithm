@@ -30,7 +30,7 @@ class Solution:
                         return True
                 board[r][c] = word[0]
             return False
-            
+
         for r in range(rows):
             for c in range(cols):
                 if backtrack(r, c, word):

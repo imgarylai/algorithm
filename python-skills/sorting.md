@@ -64,7 +64,7 @@ words = ['apple', 'apple', 'orange', 'banana']
 words.sort()
 ```
 
-## Dict 
+## Dict
 
 ### 按照 key 排序
 
@@ -81,6 +81,4 @@ table = {1: 1, 3: 3, 4: 4, 2: 2}
 for key, val in sorted(table.items(), key=lambda kv: (kv[1], kv[0])):
     print('table[{}] = {}'.format(key, val))
 ```
-
-
 

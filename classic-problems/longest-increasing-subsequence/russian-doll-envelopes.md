@@ -32,11 +32,11 @@ class Solution:
         nums = []
         for i in range(len(envelopes)):
             nums.append(envelopes[i][1])
-        
+
         piles = []
         for i in range(len(nums)):
             card = nums[i]
-            
+
             left, right = 0, len(piles)
             while left < right:
                 mid = left + (right - left) // 2
@@ -44,7 +44,7 @@ class Solution:
                     right = mid
                 else: # piles[mid][-1] < card:
                     left = mid + 1
-            
+
             if left == len(piles):
                 piles.append([])
             piles[left].append(card)

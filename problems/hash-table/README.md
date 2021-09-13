@@ -1,12 +1,12 @@
 # Hash Table/Set
 
-在 LeetCode 裡面，Hash Table 是一個很好用而且很常用的資料結構，**增、刪、查、改**的時間複雜度是 O\(1\)  。在 Python ， Hash Table 的實作是 Dict ，而且 Python 的 Dict 有很多好用的 API 可用。
+在 LeetCode 裡面，Hash Table 是一個很好用而且很常用的資料結構，**增、刪、查、改**的時間複雜度是 O\(1\) 。在 Python ， Hash Table 的實作是 Dict ，而且 Python 的 Dict 有很多好用的 API 可用。
 
 以下列出常見的使用情境
 
-### 計數
+## 計數
 
-#### 算有一個字串中每個字元各有幾個：透過字串的索引
+### 算有一個字串中每個字元各有幾個：透過字串的索引
 
 ```python
 s = 'apple'
@@ -20,7 +20,7 @@ print(table)
 # {'a': 1, 'p': 2, 'l': 1, 'e': 1}
 ```
 
-#### 算有一個字串中每個字元各有幾個：直接遍歷字元
+### 算有一個字串中每個字元各有幾個：直接遍歷字元
 
 ```python
 s = 'apple'
@@ -34,7 +34,7 @@ print(table)
 # {'a': 1, 'p': 2, 'l': 1, 'e': 1}
 ```
 
-#### 算有一個陣列每個每個字串各有幾個
+### 算有一個陣列每個每個字串各有幾個
 
 ```python
 words = ['apple', 'apple', 'orange', 'banana']
@@ -48,7 +48,7 @@ print(table)
 # {'apple': 2, 'orange': 1, 'banana': 1}
 ```
 
-#### 算有一個陣列中每個每個數字出現幾次
+### 算有一個陣列中每個每個數字出現幾次
 
 ```python
 numbers = [random.randint(0, 3) for _ in range(10)]
@@ -59,14 +59,14 @@ for number in numbers:
     else:
         table[number] = 1
 print(table)
-# {0: 2, 2: 4, 1: 2, 3: 2} 
+# {0: 2, 2: 4, 1: 2, 3: 2}
 ```
 
 上面的技巧其實只要注意到，如果當下的元素還沒有出現在 Table 裡面，我們要預設是 1 ，後面才可以繼續累加上去，不然會發生 Key not found 的情況。
 
 到了這裡，如果已經熟練了 Hash Table ，有三個 API 可以在寫題目的時候，可以讓你寫的程式更少發生小細節寫錯的情況
 
-| API  | 功能 |
+| API | 功能 |
 | :--- | :--- |
 | [`Counter`](https://docs.python.org/3/library/collections.html#collections.Counter) | dict subclass for counting hashable objects |
 | [`OrderedDict`](https://docs.python.org/3/library/collections.html#collections.OrderedDict) | dict subclass that remembers the order entries were added |

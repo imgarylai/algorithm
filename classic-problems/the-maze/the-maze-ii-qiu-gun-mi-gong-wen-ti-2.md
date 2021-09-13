@@ -1,19 +1,19 @@
 # The Maze II 球滾迷宮問題 2
 
-### BFS
+## BFS
 
 ```python
 class Solution:
     def shortestDistance(self, maze: List[List[int]], start: List[int], destination: List[int]) -> int:
         if not maze or not maze[0]: return False
-        
+
         rows = len(maze)
         columns = len(maze[0])
         distance = [[float('inf')] * columns for _ in range(rows)]
         directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]
         distance[start[0]][start[1]] = 0
         q = deque([start])
-        
+
         while q:
             r, c = q.popleft()
             for dr, dc in directions:

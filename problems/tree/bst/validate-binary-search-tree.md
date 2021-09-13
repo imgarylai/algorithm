@@ -17,7 +17,7 @@
 #         self.right = right
 class Solution:
     def isValidBST(self, root: TreeNode) -> bool:
-        
+
         def traverse(node, left=float('-inf'), right=float('inf')):
             if not node:
                 return True
@@ -26,6 +26,4 @@ class Solution:
             return False
         return traverse(root)
 ```
-
-
 

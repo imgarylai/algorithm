@@ -11,7 +11,7 @@ class RandomizedSet:
         """
         self.table = {} # val to index
         self.arr = []
-        
+
 
     def insert(self, val: int) -> bool:
         """
@@ -22,8 +22,8 @@ class RandomizedSet:
         self.table[val] = len(self.arr)
         self.arr.append(val)
         return True
-        
-        
+
+
     def remove(self, val: int) -> bool:
         """
         Removes a value from the set. Returns true if the set contained the specified element.
@@ -36,14 +36,14 @@ class RandomizedSet:
         self.arr.pop()
         del self.table[val]
         return True
-        
+
 
     def getRandom(self) -> int:
         """
         Get a random element from the set.
         """
         return self.arr[random.randint(0, len(self.arr)-1)]
-        
+
 
 
 # Your RandomizedSet object will be instantiated and called as such:

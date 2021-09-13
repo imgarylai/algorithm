@@ -5,7 +5,7 @@
 ```python
 class Solution:
     def superEggDrop(self, k: int, n: int) -> int:
-        
+
         memo = {}
         def dp(k, n):
             if k == 1: return n
@@ -17,14 +17,14 @@ class Solution:
                 res = min(res, max(dp(k - 1, i - 1), dp(k, n - i)) + 1)
             memo[(k, n)] = res
             return memo[(k, n)]
-        
+
         return dp(k, n)
 ```
 
 ```python
 class Solution:
     def superEggDrop(self, k: int, n: int) -> int:
-        
+
         memo = {}
         def dp(k, n):
             if k == 1: return n
@@ -46,7 +46,7 @@ class Solution:
 
             memo[(k, n)] = res
             return memo[(k, n)]
-        
+
         return dp(k, n)
 ```
 

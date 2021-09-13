@@ -35,5 +35,3 @@ class Solution:
         return helper(deque(list(s)))
 ```
 
-
-

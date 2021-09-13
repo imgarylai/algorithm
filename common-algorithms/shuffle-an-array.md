@@ -16,7 +16,7 @@ class Solution:
         self.nums = self.original
         self.original = list(self.original)
         return self.nums
-        
+
 
     def shuffle(self) -> List[int]:
         """
@@ -27,8 +27,6 @@ class Solution:
             self.nums[i], self.nums[idx] = self.nums[idx], self.nums[i]
         return self.nums
 ```
-
-
 
 * [Fisher–Yates shuffle](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle)
 

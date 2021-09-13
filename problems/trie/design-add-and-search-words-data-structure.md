@@ -20,7 +20,7 @@ class WordDictionary:
                 node[char] = {}
             node = node[char]
         node['$'] = True
-        
+
 
     def search(self, word: str) -> bool:
         def search_in_node(word, node) -> bool:
@@ -35,7 +35,7 @@ class WordDictionary:
                     node = node[char]
             return '$' in node
         return search_in_node(word, self.trie)
-        
+
 
 # Your WordDictionary object will be instantiated and called as such:
 # obj = WordDictionary()

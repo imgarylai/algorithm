@@ -5,7 +5,7 @@
 1. 要如何標記已經造訪過的元素
 2. 如何在矩陣中行走
 
-### DFS
+## DFS
 
 ```python
 class Solution:
@@ -29,19 +29,19 @@ class Solution:
         return island
 ```
 
-### BFS
+## BFS
 
 ```python
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
         if not grid or not grid[0]:
             return 0
-        
+
         m = len(grid)
         n = len(grid[0])
-        
+
         islands = 0
-        
+
         for i in range(m):
             for j in range(n):
                 if grid[i][j] == "1":

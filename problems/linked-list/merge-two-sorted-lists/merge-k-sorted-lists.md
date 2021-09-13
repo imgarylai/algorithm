@@ -39,7 +39,7 @@ class Solution:
         return lists[-1]
 ```
 
-不過其實這就很像是 [148. Sort List](../sort-list.md) ，我們不用一個一個合併，我們可以兩兩合併就好。這樣在合併的過程所需要花費的時間就會變成 $$log(N) $$ 。
+不過其實這就很像是 [148. Sort List](../sort-list.md) ，我們不用一個一個合併，我們可以兩兩合併就好。這樣在合併的過程所需要花費的時間就會變成 $$log(N)$$ 。
 
 這裡要注意的就是數學的處理，如果說總共有偶數個 Linked List ，每兩兩合併不會有太大的問題，可是如果是奇數個，那最後落單的要怎麼處理？或是偶數個 Linked List 合併之後，變成奇數個了，那要怎麼處理？
 
@@ -82,8 +82,8 @@ class Solution:
         if not l1:
             curr.next = l2
         return head.next
-    
-    
+
+
     def mergeKLists(self, lists: List[ListNode]) -> ListNode:
         amount = len(lists)
         interval = 1
@@ -94,7 +94,7 @@ class Solution:
         return lists[0] if amount > 0 else None
 ```
 
-### Head 
+## Head
 
 最後有一個解法是最難想到的寫法，而且做法也很漂亮，是透過 Heap 與 Linked List 的特性一起發揮出來的。
 

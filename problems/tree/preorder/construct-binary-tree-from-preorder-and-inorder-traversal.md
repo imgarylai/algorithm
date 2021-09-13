@@ -2,7 +2,7 @@
 
 [105. Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
 
-這一題的重點是，Preorder 的造訪順序是根節點 -&gt;  左子樹 -&gt; 右子樹
+這一題的重點是，Preorder 的造訪順序是根節點 -&gt; 左子樹 -&gt; 右子樹
 
 preorder 的順序，就是根節點是第一個數字
 
@@ -18,7 +18,7 @@ class Solution:
         table = {}
         for idx, val in enumerate(inorder):
             table[val] = idx
-        
+
         preorder = deque(preorder)
 
         def traverse(leftIndex, rightIndex):

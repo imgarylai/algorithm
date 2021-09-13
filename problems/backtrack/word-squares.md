@@ -5,7 +5,7 @@
 ```python
 class Solution:
     def wordSquares(self, words: List[str]) -> List[List[str]]:
-        
+
         square_width = len(words[0])
         trie = {}
         res = []
@@ -20,7 +20,7 @@ class Solution:
                     }
                     node = node[char]
                 node['#'].append(index)
-    
+
         def backtrack(curr, step):
             if step == square_width:
                 res.append(list(curr))
@@ -31,7 +31,7 @@ class Solution:
                     curr.append(word)
                     backtrack(curr, step + 1)
                     curr.pop()
-                    
+
         def getWordByPrefix(prefix):
             node = trie
             for char in prefix:
@@ -42,7 +42,7 @@ class Solution:
 
         for word in words:
             backtrack([word], 1)
-        
+
         return res
 ```
 

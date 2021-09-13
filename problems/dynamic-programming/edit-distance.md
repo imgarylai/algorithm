@@ -6,7 +6,7 @@
 
 理解原理後實作並不難，但是要直接看到題目想到要用動態規劃寫，超難！
 
-### Top down
+## Top down
 
 ```python
 class Solution:
@@ -33,7 +33,7 @@ class Solution:
         return dp(0, 0)
 ```
 
-### Bottom Up
+## Bottom Up
 
 ```python
 class Solution:
@@ -42,15 +42,15 @@ class Solution:
         cols = len(word2)
         if rows == 0 or cols == 0:
             return rows + cols
-        
+
         memo = [[0] * (cols+1) for _ in range(rows+1)]
-        
+
         for i in range(rows+1):
             memo[i][0] = i
-        
+
         for j in range(cols+1):
             memo[0][j] = j
-        
+
         for i in range(1, rows + 1):
             for j in range(1, cols + 1):
                 if word1[i - 1] == word2[j - 1]:
@@ -62,6 +62,4 @@ class Solution:
                     memo[i][j] = min(left, down, left_down) + 1
         return memo[rows][cols]
 ```
-
-
 

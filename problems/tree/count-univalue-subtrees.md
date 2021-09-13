@@ -22,7 +22,7 @@ class Solution:
         if is_uni:
             self.count += 1
         return is_uni
-        
+
     def countUnivalSubtrees(self, root: TreeNode) -> int:
         if not root:
             return 0

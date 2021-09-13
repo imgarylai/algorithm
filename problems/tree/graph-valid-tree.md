@@ -6,14 +6,14 @@ dfs 搜尋的重點是，鄰居可以是 parent ，但是如果不是 parent 卻
 class Solution:
     def validTree(self, n: int, edges: List[List[int]]) -> bool:
         if len(edges) != n - 1: return False
-        
+
         graph = [[] for _ in range(n)]
         for edge in edges:
             graph[edge[0]].append(edge[1])
             graph[edge[1]].append(edge[0])
-        
+
         seen = set()
-        
+
         def dfs(node, parent):
             if node in seen: return
             seen.add(node)

@@ -2,7 +2,7 @@
 
 [297. Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
 
-### Construct from 536 and 606
+## Construct from 536 and 606
 
 ```python
 # Definition for a binary tree node.
@@ -16,7 +16,7 @@ class Codec:
 
     def serialize(self, root):
         """Encodes a tree to a single string.
-        
+
         :type root: TreeNode
         :rtype: str
         """
@@ -32,12 +32,12 @@ class Codec:
             elif len(right) == 0:
                 return str(root.val) + '(' + left  +')'
             return str(root.val) + '(' + left + ')' + '(' + right  +')'
-        
+
         return traverse(root)
 
     def deserialize(self, data):
         """Decodes your encoded data to tree.
-        
+
         :type data: str
         :rtype: TreeNode
         """
@@ -74,8 +74,8 @@ class Codec:
                 root.right = traverse(s[begin+1:end-1], 0)
             return root
         return traverse(data, 0)
-                    
-        
+
+
 
 # Your Codec object will be instantiated and called as such:
 # ser = Codec()
@@ -87,7 +87,7 @@ class Codec:
 
 {% page-ref page="construct-string-from-binary-tree.md" %}
 
-### Preorder
+## Preorder
 
 ```python
 # Definition for a binary tree node.
@@ -101,7 +101,7 @@ class Codec:
 
     def serialize(self, root):
         """Encodes a tree to a single string.
-        
+
         :type root: TreeNode
         :rtype: str
         """
@@ -118,7 +118,7 @@ class Codec:
 
     def deserialize(self, data):
         """Decodes your encoded data to tree.
-        
+
         :type data: str
         :rtype: TreeNode
         """
@@ -132,8 +132,8 @@ class Codec:
             root.right = traverse(nodes)
             return root
         return traverse(nodes)
-        
-        
+
+
 
 # Your Codec object will be instantiated and called as such:
 # ser = Codec()
@@ -141,7 +141,7 @@ class Codec:
 # ans = deser.deserialize(ser.serialize(root))
 ```
 
-### Postorder
+## Postorder
 
 ```python
 # Definition for a binary tree node.
@@ -155,7 +155,7 @@ class Codec:
 
     def serialize(self, root):
         """Encodes a tree to a single string.
-        
+
         :type root: TreeNode
         :rtype: str
         """
@@ -169,12 +169,12 @@ class Codec:
             res.append(str(root.val))
         traverse(root)
         return ','.join(res)
-            
-        
+
+
 
     def deserialize(self, data):
         """Decodes your encoded data to tree.
-        
+
         :type data: str
         :rtype: TreeNode
         """
@@ -187,10 +187,10 @@ class Codec:
             root.right = traverse(nodes)
             root.left = traverse(nodes)
             return root
-        
+
         return traverse(nodes)
-            
-        
+
+
 
 # Your Codec object will be instantiated and called as such:
 # ser = Codec()
@@ -198,7 +198,7 @@ class Codec:
 # ans = deser.deserialize(ser.serialize(root))
 ```
 
-### Iteration \(BFS\)
+## Iteration \(BFS\)
 
 ```python
 # Definition for a binary tree node.
@@ -212,7 +212,7 @@ class Codec:
 
     def serialize(self, root):
         """Encodes a tree to a single string.
-        
+
         :type root: TreeNode
         :rtype: str
         """
@@ -232,7 +232,7 @@ class Codec:
 
     def deserialize(self, data):
         """Decodes your encoded data to tree.
-        
+
         :type data: str
         :rtype: TreeNode
         """
@@ -242,7 +242,7 @@ class Codec:
         if rootVal == '#': return None
         root = TreeNode(int(rootVal))
         q = deque([root])
-        
+
         while q:
             size = len(q)
             for i in range(size):
@@ -256,8 +256,8 @@ class Codec:
                     node.right = TreeNode(int(rightVal))
                     q.append(node.right)
         return root
-                    
-        
+
+
 
 # Your Codec object will be instantiated and called as such:
 # ser = Codec()

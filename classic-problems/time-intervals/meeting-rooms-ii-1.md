@@ -4,7 +4,7 @@
 
 這題我們要算的是，時間有重疊沒有關係，但是告訴我們至少需要幾間會議室，我們才能安排好所有的會議（面試）。
 
-往下閱讀之前，很建議先去看 252 
+往下閱讀之前，很建議先去看 252
 
 {% page-ref page="meeting-rooms-1.md" %}
 
@@ -43,18 +43,18 @@
 class Solution:
     def minMeetingRooms(self, intervals: List[List[int]]) -> int:
         intervals.sort()
-        
+
         # 會議室是空的
         heap = []
 
         # 使用了一間會議室，記錄他們的「結束」時間
         heapq.heappush(heap, intervals[0][1])    
         count = 1
-        
+
         for i in range(1, len(intervals)):
             # 要來使用會議室的人
             interval = intervals[i]
-                
+
             # 在所有會議室的結束時間，最早的結束時間有沒有比現在要開會的人的時間還早的？
             if interval[0] >= heap[0]:
                 # 有喔，所以我們可以把那組人的時間結束時間給刪掉了

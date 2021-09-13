@@ -11,7 +11,7 @@
 #         self.right = right
 class Solution:
     def tree2str(self, root: Optional[TreeNode]) -> str:
-        
+
         def traverse(root):
             if not root:
                 return ''
@@ -26,6 +26,4 @@ class Solution:
             return str(root.val) + '(' + left + ')' + '(' + right  +')'
         return traverse(root)
 ```
-
-
 

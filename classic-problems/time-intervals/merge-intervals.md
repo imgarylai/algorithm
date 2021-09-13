@@ -25,7 +25,7 @@ class Solution:
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
         intervals.sort()
         stack = [intervals[0]]
-        
+
         for i in range(1, len(intervals)):
             prevInterval = stack.pop()
             newInterval = intervals[i]
@@ -36,6 +36,4 @@ class Solution:
             stack.append(newInterval)
         return stack
 ```
-
-
 

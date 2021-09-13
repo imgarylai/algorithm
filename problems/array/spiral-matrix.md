@@ -2,14 +2,14 @@
 
 [54. Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)
 
-這一題的重點在於如果要在矩陣四個方向中行走要怎麼走，像是 [200. Number of Islands](../tree/number-of-islands.md) 也有用到。 
+這一題的重點在於如果要在矩陣四個方向中行走要怎麼走，像是 [200. Number of Islands](../tree/number-of-islands.md) 也有用到。
 
 ```python
 class Solution:
     def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
         if not matrix or not matrix[0]:
             return []
-        
+
         rows = len(matrix)
         cols = len(matrix[0])
         res = []
@@ -18,24 +18,24 @@ class Solution:
         # dr[direction], dc[direction] is the delta 
         dr = [0, 1, 0, -1]
         dc = [1, 0, -1, 0]
-        
+
         visited = set()
-        
+
         # we start from (0, 0)
         row = 0
         col = 0
         for _ in range(rows * cols):
             visited.add((row,col))
-            
+
             res.append(matrix[row][col])
-            
+
             # Candidate:
             # next coordinate should be in boundry.
             # next coordinate should haven't been visited yet. 
             next_row = row + dr[direction]
             next_col = col + dc[direction]
-            
-            
+
+
             if 0 <= next_row < rows and 0 <= next_col < cols and (next_row, next_col) not in visited:
                 row = next_row
                 col = next_col
@@ -43,7 +43,7 @@ class Solution:
                 direction = (direction + 1) % 4
                 row = row + dr[direction]
                 col = col + dc[direction]
-        
+
         return res
 ```
 

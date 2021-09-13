@@ -17,14 +17,14 @@ class TwoSum:
         Initialize your data structure here.
         """
         self.table = defaultdict(int)
-        
+
 
     def add(self, number: int) -> None:
         """
         Add the number to an internal data structure..
         """
         self.table[number] += 1
-        
+
 
     def find(self, value: int) -> bool:
         """
@@ -39,7 +39,7 @@ class TwoSum:
         return False
 ```
 
-### 雙指針
+## 雙指針
 
 這一題也可以用雙指針來寫，不過要注意的是，我們需要檢查陣列的排序狀態。
 
@@ -52,7 +52,7 @@ class TwoSum:
         """
         self.arr = []
         self.sorted = False
-        
+
 
     def add(self, number: int) -> None:
         """
@@ -60,7 +60,7 @@ class TwoSum:
         """
         self.arr.append(number)
         self.sorted = False
-        
+
 
     def find(self, value: int) -> bool:
         """

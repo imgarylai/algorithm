@@ -31,7 +31,7 @@ class Solution:
     def findDuplicateSubtrees(self, root: Optional[TreeNode]) -> List[Optional[TreeNode]]:
         res = []
         table = defaultdict(int)
-        
+
         def traverse(root):
             if not root:
                 return ['#']
@@ -41,9 +41,9 @@ class Solution:
             subTreeKey = ','.join(subTree)
             if table[subTreeKey] == 1:
                 res.append(root)
-            
+
             table[subTreeKey] += 1
-            
+
             return subTree
         traverse(root)
         return res

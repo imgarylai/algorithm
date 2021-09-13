@@ -6,7 +6,7 @@
 
 因為這個題目是一個圖，所以說要確定可以遍歷完所以的節點，又確保不會走過已經走過的路，最重要的就是要記憶過自己走過哪裡。
 
-### 廣度優先搜索
+## 廣度優先搜索
 
 ```python
 """
@@ -21,7 +21,7 @@ class Solution:
     def cloneGraph(self, node: 'Node') -> 'Node':
         if not node:
             return node
-    
+
         queue = deque([node])
         visited = {}
         visited[node] = Node(node.val)
@@ -37,7 +37,7 @@ class Solution:
         return visited[node]
 ```
 
-### 深度優先搜索
+## 深度優先搜索
 
 ```python
 """

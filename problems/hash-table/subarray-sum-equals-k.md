@@ -4,7 +4,7 @@
 
 給定一個陣列，要找一個子陣列的總和為 `K` 。
 
-### 暴力法
+## 暴力法
 
 我想到的方法是我先算出每個位置的 prefix sum ，之後我就看如果當前這個位置的 prefix sum 減掉前面某一個位置的 prefix sum ，如果說當好等於 `k` ，就代表這兩個位置之間的總和是 `k` ，也就是說前一個位置到當前這個位置的子陣列的總和是 `k` 。
 
@@ -17,19 +17,19 @@
 ```python
 class Solution:
     def subarraySum(self, nums: List[int], k: int) -> int:
-        
+
         count = 0
         l = len(nums)
         prefix_sum = [0] * (l+1)
-        
+
         for i in range(1, l+1):
             prefix_sum[i] = prefix_sum[i - 1] + nums[i - 1]
-        
+
         for i in range(l):
             for j in range(i+1, l+1):
                 if prefix_sum[j] - prefix_sum[i] == k:
                     count += 1
-                    
+
         return count
 ```
 
@@ -38,7 +38,7 @@ class Solution:
 ```python
 class Solution:
     def subarraySum(self, nums: List[int], k: int) -> int:
-        
+
         count = 0
         l = len(nums)
         for i in range(l):
@@ -50,7 +50,7 @@ class Solution:
         return count
 ```
 
-### Hash Table 
+## Hash Table
 
 這個方法比較特別一點，這個題目也是參考了兩個點
 
@@ -66,16 +66,16 @@ class Solution:
 ```python
 class Solution:
     def subarraySum(self, nums: List[int], k: int) -> int:
-               
+
         count = 0
         h = defaultdict(int)
-        
+
         # 先計算每個 prefix_sum 的次數
         prefix_sum = 0
         for num in nums:
             prefix_sum += num
             h[prefix_sum] = h[prefix_sum] + 1
-        
+
         # 1. 如果 prefix_sum 等於 k 計數加一
         # 2. 加上 prefix_sum - k 的計數，
         #    這裡不用 else 的情況是因為，如果前面有多次 prefix_sum 剛好是 0 
@@ -96,18 +96,16 @@ class Solution:
         count = 0
         h = defaultdict(int)
         cumulative_sum = 0
-        
+
         for num in nums:
             cumulative_sum += num
-            
+
             if cumulative_sum == k:
                 count += 1
-            
+
             count += h[cumulative_sum - k]
             h[cumulative_sum] = h[cumulative_sum] + 1
-        
+
         return count
 ```
-
-
 

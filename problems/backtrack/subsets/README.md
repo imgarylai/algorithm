@@ -17,7 +17,7 @@ class Solution:
                 curr.append(nums[i])
                 backtrack(k, curr, i + 1)
                 curr.pop()
-        
+
         for k in range(len(nums) + 1):
             backtrack(k, [], 0)
         return ans

@@ -1,6 +1,6 @@
 # The Maze 球滾迷宮問題
 
-### BFS
+## BFS
 
 ```python
 class Solution:

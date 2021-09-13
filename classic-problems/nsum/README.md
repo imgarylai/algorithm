@@ -74,7 +74,7 @@ class Solution:
                 while (lo < hi and right == nums[hi]):
                     hi -= 1
         return res
-    
+
     def kSum(self, k, nums, target, start):
         size = len(nums)
         res = []
@@ -93,8 +93,8 @@ class Solution:
                     i += 1
                 i += 1
         return res
-                
-    
+
+
     def nSum(self, nums: List[int], target: int, n: int) -> List[List[int]]:
         # 先一開始就將陣列排序
         nums.sort()
@@ -141,13 +141,13 @@ class Solution:
             for num2 in nums2:
                 s = num1 + num2
                 table[s] = table.get(s, 0) + 1
-        
+
         for num3 in nums3:
             for num4 in nums4:
                 s = num3 + num4
                 if -s in table:
                     ans += table.get(-s, 0)
-        
+
         return ans
 ```
 
@@ -163,13 +163,13 @@ class Solution:
                 for num2 in nums2:
                     s = num1 + num2
                     table[s] = table.get(s, 0) + 1
-            
+
             for num3 in nums3:
                 for num4 in nums4:
                     s = num3 + num4
                     if target-s in table:
                         ans += table.get(target-s, 0)
-            
+
             return ans
         return helper(nums1, nums2, nums3, nums4, 0)
 ```

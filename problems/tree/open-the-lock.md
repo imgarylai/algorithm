@@ -5,13 +5,13 @@
 ```python
 class Solution:
     def openLock(self, deadends: List[str], target: str) -> int:        
-            
+
         visited = set()
         for deadend in deadends:
             visited.add(deadend)
-            
+
         root = '0000'
-        
+
         steps = 0
         queue = deque([root])
         visited.add(root)
@@ -34,13 +34,13 @@ class Solution:
                         queue.append(child)
                         visited.add(child)
             steps += 1
-        
+
         return -1
 ```
 
 ```python
 class Solution:
-    
+
     def generate_keys(self, node):
         keys = []
         for i in range(4):
@@ -49,12 +49,12 @@ class Solution:
             keys.append(node[:i] + plus_one + node[i+1:])
             keys.append(node[:i] + minus_one + node[i+1:])
         return keys
-    
+
     def openLock(self, deadends: List[str], target: str) -> int:         
         visited = set()
         for deadend in deadends:
             visited.add(deadend)
-            
+
         root = '0000'
         steps = 0
         queue = deque([root])
@@ -71,7 +71,7 @@ class Solution:
                         queue.append(key)
                         visited.add(key)
             steps += 1
-        
+
         return -1
 ```
 

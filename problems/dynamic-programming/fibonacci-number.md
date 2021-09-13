@@ -4,7 +4,7 @@
 
 這一題是所有介紹動態規劃最基礎的一個題目，題目要求[斐波那契數](https://zh.wikipedia.org/wiki/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0) ，根據題目定義，可以很簡單的寫出遞迴的方法
 
-### 遞迴
+## 遞迴
 
 ```python
 class Solution:
@@ -19,7 +19,7 @@ class Solution:
 
 可是這個方法存在著很多的重複的子問題，所以可以用動態規劃的方法做。
 
-### 自頂向下
+## 自頂向下
 
 ```python
 class Solution:
@@ -38,7 +38,7 @@ class Solution:
         return traverse(n)
 ```
 
-### 自底向上
+## 自底向上
 
 ```python
 class Solution:
@@ -47,11 +47,11 @@ class Solution:
         memo[1] = 1
         for i in range(2, n+1):
             memo[i] = memo[i-1] + memo[i-2]
-        
+
         return memo[n]
 ```
 
-### 減少記憶體
+## 減少記憶體
 
 ```python
 class Solution:    
@@ -64,6 +64,4 @@ class Solution:
             first, second = second, first + second        
         return second
 ```
-
-
 

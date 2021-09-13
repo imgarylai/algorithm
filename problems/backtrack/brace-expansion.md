@@ -37,8 +37,8 @@ class Solution:
                     curr.append(char)
                     backtrack(curr, index + 1)
                     curr.pop()
-                
-            
+
+
         backtrack([], 0)
         ans.sort()
         return ans

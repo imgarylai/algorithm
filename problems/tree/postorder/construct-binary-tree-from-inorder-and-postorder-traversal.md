@@ -20,7 +20,7 @@ class Solution:
         table = {}
         for idx, val in enumerate(inorder):
             table[val] = idx
-        
+
         def traverse(leftIndex, rightIndex):
             if leftIndex > rightIndex:
                 return None

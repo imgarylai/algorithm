@@ -15,7 +15,7 @@ class Solution:
             return 0
         queue = deque([root])
         level = 0
-        
+
         while queue:
             size = len(queue)
             level += 1

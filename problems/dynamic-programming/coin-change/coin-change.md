@@ -11,7 +11,7 @@ class Solution:
             for coin in coins:
                 if i - coin >= 0:
                     dp[i] = min(dp[i], 1 + dp[i-coin])
-                
+
         return -1 if dp[amount] == float('inf') else dp[amount]
 ```
 

@@ -26,7 +26,7 @@ for row in range(1, rows):
 0  2  7  11 14 
 0  0  3  8  12 
 0  0  0  4  9  
-0  0  0  0  5  
+0  0  0  0  5
 ```
 
 矩陣的走法也可以被當作是一種題目來呈現，像是 [498. Diagonal Traverse](../../problems/array/diagonal-traverse.md) 。 這裡我會整理出所有我想得到的矩陣走法。有時候快速想到這個矩陣走法，可以讓自己在面試的時候更不會慌張，並且有效的解決問題。
@@ -40,6 +40,4 @@ def print_matrix(matrix):
             print(str(matrix[row][col]).ljust(2), end=' ')
         print()
 ```
-
-
 

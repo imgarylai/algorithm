@@ -15,9 +15,7 @@ class Solution:
         for i in range(1, m + 1):
             if i not in S:
                 ans.append(i)
-        
+
         return ans
 ```
-
-
 

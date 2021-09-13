@@ -322,7 +322,7 @@
 
 * [排序技巧](python-skills/sorting.md)
 * [陣列複製](python-skills/copy.md)
-* [向矩陣中的四個方向移動](python-skills/xiang-ju-zhen-zhong-de-si-ge-fang-xiang-yi-dong.md)
+* [向矩陣中的四個方向移動](python-skills/moving-four-directions-in-matrix.md)
 * [矩陣的走法](python-skills/move-in-matrix/README.md)
   * [矩陣遍歷的方法](python-skills/move-in-matrix/ju-zhen-bian-li-de-fang-fa.md)
 

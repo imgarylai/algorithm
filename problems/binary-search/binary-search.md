@@ -7,7 +7,7 @@ class Solution:
     def search(self, nums: List[int], target: int) -> int:
         left = 0
         right = len(nums) - 1
-        
+
         while left <= right:
             mid = left + (right - left) // 2
             if nums[mid] == target:
@@ -16,7 +16,7 @@ class Solution:
                 right = mid - 1
             if nums[mid] < target:
                 left = mid + 1
-        
+
         return -1
 ```
 
@@ -25,7 +25,7 @@ class Solution:
     def search(self, nums: List[int], target: int) -> int:
         left = 0
         right = len(nums) - 1
-        
+
         def binarySearch(left, right):
             if left > right:
                 return -1
@@ -36,7 +36,7 @@ class Solution:
                 return binarySearch(left, mid - 1)
             if nums[mid] < target:
                 return binarySearch(mid + 1, right)
-        
+
         return binarySearch(left, right)
 ```
 

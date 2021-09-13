@@ -8,13 +8,13 @@
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
         S = set()
-        
+
         for num in nums:
             if num not in S:
                 S.add(num)
             else:
                 S.remove(num)
-        
+
         return S.pop()
 ```
 
@@ -23,11 +23,11 @@ class Solution:
 ```python
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
-        
+
         ans = 0
         for num in nums:
             ans ^= num
-        
+
         return ans
 ```
 

@@ -15,7 +15,7 @@ class AutocompleteSystem:
                 node = node[char]
             node['$'] = (time, sentence)
         self.query = ''
-        
+
     def save_query(self):
         node = self.trie
         for char in self.query:

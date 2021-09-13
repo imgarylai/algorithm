@@ -2,18 +2,16 @@
 
 ## Disjoint Set
 
-### 
-
 {% tabs %}
 {% tab title="Quick Find" %}
 ```python
 class UnionFind:
     def __init__(self, size):
         self.root = [i for i in range(size)]
-        
+
     def find(self, x):
         return self.root[x]
-    
+
     def union(self, x, y):
         rootX = self.find(x)
         rootY = self.find(y)
@@ -34,20 +32,20 @@ class UnionFind:
 class UnionFind:
     def __init__(self, size):
         self.root = [i for i in range(size)]
-        
+
     def find(self, x):
         # 不斷的往上尋找，直到找到根節點
         while self.root[x] != x:
             x = self.root[x]
         return x
-    
+
     def union(self, x, y):
         rootX = self.find(x)
         rootY = self.find(y)
         # 如果兩個跟節點不相同，選擇 rootX 當作新的根節點。
         if rootX != rootY:
             self.root[rootY] = rootX        
-    
+
     def connected(self, x, y):
         return self.find(x) == self.find(y)
 ```
@@ -59,12 +57,12 @@ class UnionFind:
     def __init__(self, size):
         self.root = [i for i in range(size)]
         self.rank = [i for i in range(size)]
-    
+
     def find(self, x):
         while self.root[x] != x:
             x = self.root[x]
         return x
-    
+
     def union(self, x, y):
         rootX = self.find(x)
         rootY = self.find(y)
@@ -87,39 +85,37 @@ class UnionFind:
 class UnionFind:
     def __init__(self, size):
         self.root = [i for i in range(size)]
-        
+
     def find(self, x):
         if x == self.root[x]:
             return x
         self.root[x] = self.find(self.root[x])
         return self.root[x]
-    
+
     def union(self, x, y):
         rootX = self.find(x)
         rootY = self.find(y)
         if rootX != rootY:
             self.root[rootY] = rootX        
-    
+
     def connected(self, x, y):
         return self.find(x) == self.find(y)
 ```
 {% endtab %}
 
 {% tab title="Union Path Compression + Rank" %}
-
-
 ```python
 class UnionFind:
     def __init__(self, size):
         self.root = [i for i in range(size)]
         self.rank = [i for i in range(size)]
-        
+
     def find(self, x):
         if x == self.root[x]:
             return x
         self.root[x] = self.find(self.root[x])
         return self.root[x]
-    
+
     def union(self, x, y):
         rootX = self.find(x)
         rootY = self.find(y)
@@ -131,7 +127,7 @@ class UnionFind:
             else:
                 self.root[rootY] = rootX
                 self.rank[rootX] += 1        
-    
+
     def connected(self, x, y):
         return self.find(x) == self.find(y)
 ```

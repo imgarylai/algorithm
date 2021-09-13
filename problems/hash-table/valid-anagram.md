@@ -8,17 +8,17 @@ class Solution:
         table = defaultdict(int)
         for char in s:
             table[char] += 1
-        
+
         for char in t:
             if table[char] > 0:
                 table[char] -= 1
             else:
                 return False
-        
+
         for key in table.keys():
             if table[key] != 0:
                 return False
-        
+
         return True
 ```
 

@@ -10,7 +10,7 @@ class Solution:
         return [int(s) for s in strArr]
 ```
 
-### 參考
+## 參考
 
 {% page-ref page="../../python-skills/sorting.md" %}
 

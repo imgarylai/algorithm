@@ -30,7 +30,7 @@ class Solution:
         else:
             sub = self.mypow(m, n//2)
             return sub * sub % self.base
-    
+
     def superPow(self, a: int, b: List[int]) -> int:
         m = a % self.base
         n = int(''.join(map(str, b)))
@@ -75,7 +75,7 @@ class Solution:
         else:
             sub = self.myPow(m, n//2)
             return sub * sub % self.base
-    
+
     def superPow(self, a: int, b: List[int]) -> int:        
         if not b:
             return 1

@@ -11,7 +11,7 @@
 ```python
 class Solution:
     def minSubArrayLen(self, target: int, nums: List[int]) -> int:
-        
+
         ans = float('inf')
         fast = 0
         slow = 0
@@ -20,13 +20,13 @@ class Solution:
             num = nums[fast]
             fast += 1
             acc += num
-            
+
             while acc >= target:
                 ans = min(ans, fast - slow)
                 d = nums[slow]
                 slow += 1
                 acc -= d
-                
+
         return 0 if ans == float('inf') else ans
 ```
 
@@ -35,25 +35,23 @@ class Solution:
 ```python
 class Solution:
     def minSubArrayLen(self, target: int, nums: List[int]) -> int:
-        
+
         ans = float('inf')
         fast = 0
         slow = 0
-        
+
         acc = 0
         while fast < len(nums):
             num = nums[fast]
             fast += 1
             acc += num
-            
+
             while acc >= target:
                 d = nums[slow]
                 slow += 1
                 acc -= d
                 ans = min(ans, fast - slow + 1)
-                
+
         return 0 if ans == float('inf') else ans
 ```
-
-
 

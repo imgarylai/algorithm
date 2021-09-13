@@ -21,10 +21,10 @@ class Solution:
                 if matrix[row][col] == 0:
                     zero_rows.append(row)
                     zero_cols.append(col)
-                    
+
         for row in zero_rows:
             matrix[row] = [0] * cols
-            
+
         for col in zero_cols:
             for row in range(rows):
                 matrix[row][col]  = 0

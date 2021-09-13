@@ -16,7 +16,7 @@
 class Solution:
     def __init__(self):
         self.diameter = 0
-    
+
     def diameterOfBinaryTree(self, root: TreeNode) -> int:
         diameters= []
         def helper(root):
@@ -42,7 +42,7 @@ class Solution:
 class Solution:
     def __init__(self):
         self.diameter = 0
-    
+
     def diameterOfBinaryTree(self, root: TreeNode) -> int:
         def helper(root):
             if not root:

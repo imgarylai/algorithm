@@ -32,7 +32,7 @@ class Solution:
             curr = curr.next
             scope += 1
         return res
-        
+
 # Your Solution object will be instantiated and called as such:
 # obj = Solution(head)
 # param_1 = obj.getRandom()

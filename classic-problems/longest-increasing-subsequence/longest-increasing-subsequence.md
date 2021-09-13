@@ -25,7 +25,7 @@ dp[i] => 2
 
 ```text
 dp[i] = max(dp[i], dp[j] + 1) 
-# j is the index which is smaller than i and contributes the longest increasing subsequence. 
+# j is the index which is smaller than i and contributes the longest increasing subsequence.
 ```
 
 最後的答案。
@@ -34,7 +34,7 @@ dp[i] = max(dp[i], dp[j] + 1)
 class Solution:
     def lengthOfLIS(self, nums: List[int]) -> int:
         dp = [1] * len(nums)
-        
+
         for i in range(1, len(nums)):
             for j in range(i):
                 if nums[j] >= nums[i]:
@@ -45,9 +45,9 @@ class Solution:
         return max(dp)
 ```
 
-時間複雜度： $$O(n^2)$$ 
+時間複雜度： $$O(n^2)$$
 
-### 補充
+## 補充
 
 這個題目其實有一個更快的解法，時間複雜度只要 $$O(nlogn)$$ ，是使用一個叫做[耐心排序\(Patience sorting\)](https://en.wikipedia.org/wiki/Patience_sorting)的方法。
 
@@ -57,12 +57,12 @@ class Solution:
 class Solution:
     def lengthOfLIS(self, nums: List[int]) -> int:
         piles = [] # 牌堆，一開始沒有牌堆
-        
+
         # 開始整理撲克牌
         for i in range(len(nums)):
             # 目前要整理的牌
             card = nums[i]
-            
+
             # 我有哪些排堆可以整理，用二分搜索的方式來整理
             left, right = 0, len(piles) - 1
             while left <= right:

@@ -47,9 +47,9 @@ class Solution:
 class Solution:
     def __init__(self):
         self.memo = {}
-    
+
     def numDecodings(self, s: str) -> int:
-        
+
         def recursive(index: int) -> int:
             # 要先處理越界，不然下一個條件會報錯
             if index == len(s):
@@ -60,7 +60,7 @@ class Solution:
             # 沒有越界，也不是零，才是真的到達了終點
             if index == len(s) - 1:
                 return 1
-            
+
             ans = recursive(index + 1)
             if 10 <=int(s[index:index + 2]) <= 26:
                 ans += recursive(index + 2)
@@ -72,7 +72,7 @@ class Solution:
 
 但因為我們有了遞迴的關係，我們可以直接用自頂向下的方式來記憶
 
-### 自頂向下
+## 自頂向下
 
 ```python
 class Solution:    
@@ -81,20 +81,20 @@ class Solution:
         def recursiveWithMemo(index: int):
             if index in memo:
                 return memo[index]
-            
+
             if index == len(s):
                 return 1
-            
+
             if s[index] == '0':
                 return 0
-            
+
             if index == len(s) - 1:
                 return 1
-            
+
             ans = recursiveWithMemo(index + 1)
             if 10 <= int(s[index : index + 2]) <= 26:
                 ans += recursiveWithMemo(index + 2)
-            
+
             memo[index] = ans
             return memo[index]
         return recursiveWithMemo(0)

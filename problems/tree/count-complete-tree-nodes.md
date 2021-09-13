@@ -2,7 +2,7 @@
 
 [222. Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/)
 
-### 線性搜索
+## 線性搜索
 
 ```python
 # Definition for a binary tree node.
@@ -13,7 +13,7 @@
 #         self.right = right
 class Solution:
     def countNodes(self, root: Optional[TreeNode]) -> int:
-        
+
         def dfs(node):
             if not node:
                 return 0
@@ -22,13 +22,13 @@ class Solution:
             left = dfs(node.left)
             right = dfs(node.right)
             return left+right+1
-        
+
         return dfs(root)
 ```
 
 這樣的時間複雜度是 $$O(n)$$ ，老實說其實不差，不過這個題目存在這另一個更快速的解法，這個不容易想到，不過不算很難理解。
 
-### 二分搜索
+## 二分搜索
 
 上面的作法並沒有使用到題目給的 [Complete Tree](https://web.cecs.pdx.edu/~sheard/course/Cs163/Doc/FullvsComplete.html#:~:text=A%20complete%20binary%20tree%20is,as%20far%20left%20as%20possible.) 的特性，那就是樹的每一層都是完整的結構，除了最後一層。
 
@@ -42,14 +42,14 @@ class Solution:
 #         self.left = left
 #         self.right = right
 class Solution:
-    
+
     def getDepth(self, node: Optional[TreeNode]) -> int:
         depth = 0
         while node.left:
             node = node.left
             depth += 1
         return depth
-    
+
     def exists(self, idx, depth, node) -> bool:
         left = 0
         right = 2 ** depth - 1
@@ -62,17 +62,17 @@ class Solution:
                 node = node.right
                 left = mid + 1
         return node is not None
-    
+
     def countNodes(self, root: Optional[TreeNode]) -> int:
-        
+
         if not root:
             return 0
-        
+
         depth = self.getDepth(root)
-        
+
         if depth == 0:
             return 1
-        
+
         left = 1
         right = 2 ** depth - 1
         while left <= right:
@@ -81,7 +81,7 @@ class Solution:
                 left = mid + 1
             else:
                 right = mid - 1
-                
+
         return 2**depth - 1 + left
 ```
 

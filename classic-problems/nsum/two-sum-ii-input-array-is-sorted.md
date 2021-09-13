@@ -17,7 +17,7 @@ class Solution:
                 left += 1
             elif total > target:
                 right -= 1
-            
+
         return [-1, -1]
 ```
 

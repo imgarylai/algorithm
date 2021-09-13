@@ -14,9 +14,9 @@ class Solution:
         for key, item in table.items():
             item.sort()
             visited[key] = [False]*len(item)
-        
+
         numTickets = len(tickets) + 1
-        
+
         res = []
         def backtrack(src, curr):
             if len(curr) == numTickets:
@@ -29,18 +29,14 @@ class Solution:
                     visited[src][idx] = False
                     if ret:
                         return True
-                
+
         backtrack('JFK', ['JFK'])
         return res[0]
 ```
 
-### 其他資源
+## 其他資源
 
 我覺得講解最好的影片
 
-{% embed url="https://www.youtube.com/watch?v=WYqsg5dziaQ" %}
-
-
-
-
+{% embed url="https://www.youtube.com/watch?v=WYqsg5dziaQ" caption="" %}
 

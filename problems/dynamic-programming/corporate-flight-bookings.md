@@ -15,7 +15,7 @@ class Solution:
             for i in range(start1-1, end):
                 matrix[row][i] = reserved
         ans = []
-        
+
         for col in range(cols):
             tmp = 0
             for row in range(rows):
@@ -36,7 +36,7 @@ class Solution:
             first, last, seats = booking
             ans[first - 1] += seats
             ans[last] -= seats
-        
+
         for i in range(1, n):
             ans[i] += ans[i-1]
         ans.pop()

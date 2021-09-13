@@ -37,7 +37,7 @@ class Solution:
                 memo[char] += 1
                 if memo[char] == target[char]:
                     valid += 1
-            
+
             while valid == len(target):
                 if right - left < L:
                     start = left
@@ -48,9 +48,7 @@ class Solution:
                     if memo[remove] == target[remove]:
                         valid -= 1
                     memo[remove] -= 1
-        
+
         return '' if L == float('inf') else s[start:start+L]
-                
-            
 ```
 

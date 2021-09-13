@@ -54,11 +54,11 @@ class Solution:
                 return 0
             left = max(traverse(node.left), 0)
             right = max(traverse(node.right), 0)
-            
+
             # observer 
             paths.append(left + right + node.val)
             return max(left, right) + node.val
-        
+
         traverse(root)
         return max(paths)
 ```
@@ -83,10 +83,10 @@ class Solution:
                 return 0
             left = max(traverse(node.left), 0)
             right = max(traverse(node.right), 0)
-            
+
             ans = max(ans, left + right + node.val)
             return max(left, right) + node.val
-        
+
         traverse(root)
         return ans
 ```

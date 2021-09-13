@@ -7,7 +7,7 @@
    2. 右側的邊界，ex: `len(nums)` or `len(nums) - 1`
 2. 循環條件的終止，ex: `while left <= right` or `while left < right`
 
-### Binary Search
+## Binary Search
 
 ```python
 def binarySearch(nums: List[int], target: int) -> int:
@@ -24,7 +24,7 @@ def binarySearch(nums: List[int], target: int) -> int:
     return -1
 ```
 
-### Find Left Bound
+## Find Left Bound
 
 ```python
 def findLeftBound(nums: List[int], target: int) -> int:
@@ -58,7 +58,7 @@ def findLeftBound(nums: List[int], target: int) -> int:
     return left
 ```
 
-### Find Right Bound
+## Find Right Bound
 
 ```python
 def findRightBound(nums: List[int], target: int) -> int:
@@ -91,6 +91,4 @@ def findRightBound(nums: List[int], target: int) -> int:
         return -1
     return right
 ```
-
-
 

@@ -4,7 +4,7 @@
 
 這一題並不難，主要是熟悉用不同的方式來完成同樣的一件事情
 
-### 雙指針
+## 雙指針
 
 ```python
 class Solution:
@@ -20,7 +20,7 @@ class Solution:
             right -=1
 ```
 
-### 遞迴
+## 遞迴
 
 ```python
 class Solution:
@@ -32,7 +32,7 @@ class Solution:
             if left <= right:
                 s[left], s[right] = s[right], s[left]
                 helper(left + 1, right - 1)
-        
-        helper(0, len(s) - 1)  
+
+        helper(0, len(s) - 1)
 ```
 

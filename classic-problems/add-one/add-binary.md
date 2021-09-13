@@ -10,10 +10,10 @@ class Solution:
             b = '0'*(len(a) - len(b)) + b
         else:
             a = '0'*(len(b) - len(a)) + a
-        
+
         n = len(a)
         carry = False
-        
+
         for i in reversed(range(n)):
             if carry:
                 if a[i] == b[i]:
@@ -31,7 +31,7 @@ class Solution:
                     res += '1'
         if carry:
             res += '1'
-        
+
         return res[::-1]
 ```
 

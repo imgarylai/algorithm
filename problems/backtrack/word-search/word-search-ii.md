@@ -24,7 +24,7 @@ class Solution:
                 board[r][c] = word[0]
             return False
         ans = set()
-        
+
         for word in set(words):
             for r in range(rows):
                 for c in range(cols):
@@ -33,7 +33,7 @@ class Solution:
         return ans
 ```
 
-### Trie 
+## Trie
 
 這個解法其實滿特別的，我依稀有想到，但是實作的細節還是有點難，LeetCode 上面是直接寫出了解答，但是我覺得如何去思考出這個想法才是最困難的。
 
@@ -45,15 +45,15 @@ class Solution:
 
 接下來依然是回朔法，但是我們透過 Trie 可以更大量的減少搜索空間
 
-#### 第一步
+### 第一步
 
 在遍歷矩陣時，要先注意矩陣的元素是否是在 Trie 的根節點？如果沒有的話，代表從那個點出發一定不會有我們目標的字串
 
-#### 第二步
+### 第二步
 
 先取得該節點，如果該節點有 Trie 的結束標記符號，代表我們找到了目標字串之一，加到答案裡面。
 
-#### 第三步
+### 第三步
 
 開始向下探索，要確定三件事情
 
@@ -70,14 +70,14 @@ class Solution:
         cols = len(board[0])
         directions = [(1,0),(0,1),(-1,0),(0,-1)]
         trie = {}
-        
+
         for word in words:
             node = trie
             for char in word:
                 node = node.setdefault(char, {})
             node['$'] = word
         ans = set()
-        
+
         def backtrack(row, col, visited, root):
             node = root[board[row][col]]
             if '$' in node.keys():
@@ -88,7 +88,7 @@ class Solution:
                 if 0 <= nr < rows and 0 <= nc < cols and board[nr][nc] in node and (nr, nc) not in visited:
                     backtrack(nr, nc, visited, node)
             visited.remove((row, col))
-        
+
         for row in range(rows):
             for col in range(cols):
                 if board[row][col] in trie:

@@ -2,7 +2,7 @@
 
 [37. Sudoku Solver](https://leetcode.com/problems/sudoku-solver/)
 
-這一題和 [51. & 52. N Queens](51.-and-52.-n-queens.md) 的本質不會差太多。 
+這一題和 [51. & 52. N Queens](51.-and-52.-n-queens.md) 的本質不會差太多。
 
 如我在前言裡面所提到的，回溯法的本質和窮舉有關，思考排列組合窮舉的方式可以幫助我們思考回溯法如何的走訪。
 
@@ -16,7 +16,7 @@ for row in range(len(rows)):
 
 可是這樣一定是不對的因為上面那樣子的走法的意思是，我要從一個座標平面中的每一個點都當作出發點，並在每個出發點都進行一次回溯法（ [79. Word Search](word-search/) 為例）。
 
-而數獨的題目，`(0, 0)`  就可以當作出發座標，我們要走訪的是 `(0, 0) -> (n-1, n-1)` ，但是接下來要注意到的是，那我們到底要怎麼走？回溯法很多題目是在二維矩陣上面做搜尋的，通常我們並不在意搜尋的方向性，只要不越過邊界、符合題目條件，我們都可以往前移動後，再視情況進行回溯。
+而數獨的題目，`(0, 0)` 就可以當作出發座標，我們要走訪的是 `(0, 0) -> (n-1, n-1)` ，但是接下來要注意到的是，那我們到底要怎麼走？回溯法很多題目是在二維矩陣上面做搜尋的，通常我們並不在意搜尋的方向性，只要不越過邊界、符合題目條件，我們都可以往前移動後，再視情況進行回溯。
 
 可是數獨的最好的方法其實是按照一個方向走下去，例如當人類在玩的時候，會盡可能地先完成一行、一列或一個正方形，這裡就是題目比較需要注意的地方，那就是我們要怎麼走訪數獨中的所有元素？
 
@@ -27,14 +27,14 @@ def backtrack(row, col):
     # 每次走到該行的最後一個位置後，我們就要換下一列走，並且回到行的開頭
     if col == 9:
         return backtrack(row + 1, 0)
- 
+
     # 列可以成功走完了，代表目前數獨題目的所有位置都成功放對數字了，存在著解答。
     if row == 9:
         return True
-        
+
     if board[i][j] != '.':
         return backtrack(i, j+1)
-    
+
     # TODO
 ```
 
@@ -45,12 +45,12 @@ def backtrack(row, col):
 ```python
 class Solution:
 
-    
+
     def solveSudoku(self, board: List[List[str]]) -> None:
         """
         Do not return anything, modify board in-place instead.
         """
-        
+
         def isValid(row, col, num):
             # 驗證該行沒有重複元素
             for i in range(9):
@@ -66,27 +66,27 @@ class Solution:
                     if board[i][j] == str(num):
                         return False
             return True
-                
+
         def backtrack(row, col):
-            
+
             if col == 9:
                 return backtrack(row + 1, 0)
-            
+
             if row == 9:
                 return True
-            
+
             if board[row][col] != '.':
                 return backtrack(row, col+1)
-            
+
             for num in range(1, 10):
                 if isValid(row, col, num):
                     board[row][col] = str(num)
                     if backtrack(row, col+1):
                         return True
                     board[row][col] = '.'                    
-            
+
             return False
-        
+
         return backtrack(0, 0)
 ```
 

@@ -17,14 +17,14 @@ class Solution:
                 name += formula[self.i]
                 self.i += 1
             return name
-        
+
         def getCount():
             digit = ''
             while self.i < len(formula) and formula[self.i].isdigit():
                 digit += formula[self.i]
                 self.i += 1
             return int(digit) if digit else 1
-        
+
         def helper():
             counts = defaultdict(int)
             while self.i < len(formula):
@@ -50,6 +50,4 @@ class Solution:
                 res += '{}'.format(key)
         return res
 ```
-
-
 

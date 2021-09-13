@@ -2,7 +2,7 @@
 
 [673. Number of Longest Increasing Subsequence](https://leetcode.com/problems/number-of-longest-increasing-subsequence/)
 
-### Prerequisite
+## Prerequisite
 
 {% page-ref page="longest-increasing-subsequence.md" %}
 
@@ -20,7 +20,7 @@ class Solution:
                 if nums[j] < nums[i]:
                     curr = max(curr, dp[j][0] + 1)
             LIS = max(LIS, curr)
-            
+
             # 再去累加有哪些路徑可以到
             for j in range(i):
                 if nums[j] < nums[i] and dp[j][0] == curr - 1:
@@ -36,6 +36,4 @@ class Solution:
                 ans += count
         return ans
 ```
-
-
 

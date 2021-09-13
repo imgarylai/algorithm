@@ -4,7 +4,7 @@
 
 每次檢查一個單字，看看單字有沒有符合是目標字串的前綴字元，如果說有符合的話，繼續從剩的字串檢查下去，剩餘的字串起始位置是符合的單字的長度。
 
-### 遞迴
+## 遞迴
 
 ```python
 class Solution:
@@ -24,7 +24,7 @@ class Solution:
 
 遞迴的方式有很多重複的子問題，例如目標字串是 `code` ，字典是：`[c, o, co, de]` ，`de` 就是重疊子問題，所以所以利用記憶法來避免重複的子問題。
 
-### 自頂向下
+## 自頂向下
 
 ```python
 class Solution:
@@ -47,7 +47,7 @@ class Solution:
         return helper(s)
 ```
 
-### 自底向上
+## 自底向上
 
 做法有點不直覺，處理的邏輯是一步一步走，去檢查每一個位置，有沒有機會可以用任何字典中的單字拼起來。檢查的邏輯如下：
 
@@ -56,20 +56,20 @@ class Solution:
 ```python
 class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
-        
+
         dp = [False] * (len(s) + 1)
         dp[0] = True
-        
+
         for end in range(1, len(s)+1):
             for start in range(end):
                 if dp[start] and s[start:end] in wordDict:
                     dp[end] = True
                     break
-        
+
         return dp[len(s)]
 ```
 
-### 回溯法
+## 回溯法
 
 這一題其實也可以用回溯法來寫，道理很類似，回溯法也是遞迴的一種，只要加上記憶法就可以了。
 
@@ -78,9 +78,9 @@ class Solution:
 ```python
 class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
-        
+
         wordDictSet = set(wordDict)
-        
+
         memo = {}
         ans = []
         def helper(s, curr):
@@ -100,11 +100,7 @@ class Solution:
                             curr.pop()
                 memo[s] = False
                 return memo[s]
-        
+
         return helper(s, [])
 ```
-
-
-
-
 

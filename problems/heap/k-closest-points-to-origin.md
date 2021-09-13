@@ -14,9 +14,7 @@ class Solution:
                 heapq.heappushpop(q, (-dest(x, y), [x, y]))
             else:
                 heapq.heappush(q, (-dest(x, y), [x, y]))
-            
+
         return [value for key, value in q]
 ```
-
-
 

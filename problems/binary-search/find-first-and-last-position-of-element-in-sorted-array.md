@@ -43,7 +43,7 @@ class Solution:
 ```python
 class Solution:
     def searchRange(self, nums: List[int], target: int) -> List[int]:  
-    
+
         left = 0
         right = len(nums) - 1
         while left <= right:
@@ -52,9 +52,9 @@ class Solution:
                 right = mid - 1
             elif nums[mid] < target:
                 left = mid + 1
-                
+
         left_bound = -1 if (left >= len(nums) or nums[left] != target) else left
-        
+
         left = 0
         right = len(nums) - 1
         while left <= right:
@@ -63,9 +63,9 @@ class Solution:
                 left = mid + 1
             if nums[mid] > target:
                 right = mid - 1
-        
+
         right_bound = -1 if (right < 0 or nums[right] != target) else right
-        
+
         return [left_bound, right_bound]
 ```
 

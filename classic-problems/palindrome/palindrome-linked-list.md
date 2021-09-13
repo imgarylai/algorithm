@@ -19,7 +19,7 @@ class Solution:
             copy = copy.next
             curr = curr.next
         return copy_head.next
-    
+
     def reverseList(self, head: ListNode) -> ListNode:
         node = None
         while head:
@@ -28,11 +28,11 @@ class Solution:
             node = head
             head = tmp
         return node
-    
+
     def isPalindrome(self, head: ListNode) -> bool:
         cloned = self.reverseList(self.cloneLinkedList(head))
         curr = head
-        
+
         while curr:
             if curr.val != cloned.val:
                 return False
@@ -68,24 +68,22 @@ class Solution:
     # 876. Middle of the Linked List
     def middleNode(self, head: ListNode) -> ListNode:
         slow = fast = head
-        
+
         while fast and fast.next:
             slow = slow.next
             fast = fast.next.next
         return slow
-    
+
     def isPalindrome(self, head: ListNode) -> bool:
         mid = self.middleNode(head) 
         node = self.reverseList(mid)
-        
+
         while node:
             if node.val != head.val:
                 return False
             node = node.next
             head = head.next
-            
+
         return True
 ```
-
-
 

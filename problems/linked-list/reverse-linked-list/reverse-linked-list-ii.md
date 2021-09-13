@@ -70,14 +70,14 @@ class Solution:
         head.next.next = head
         head.next = successor
         return successor, last
-    
+
     def reverseBetween(self, head: Optional[ListNode], left: int, right: int) -> Optional[ListNode]:
         if (left == 1):
             successor, last = self.reverseListN(head, right);
             return last
-        
+
         head.next = self.reverseBetween(head.next, left - 1, right - 1);
-        
+
         return head
 ```
 

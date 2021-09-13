@@ -19,7 +19,7 @@ class Interval:
 
 class Solution:
     def employeeFreeTime(self, schedule: '[[Interval]]') -> '[Interval]':
-        
+
         intervals = []
         for interval in schedule:
             for i in interval:
@@ -34,7 +34,7 @@ class Solution:
             else:
                 stack.append(prevInterval)
             stack.append(newInterval)
-            
+
         if len(stack) <= 1:
             return []
         else:
@@ -43,6 +43,4 @@ class Solution:
                 ans.append(Interval(start=stack[i-1][1], end=stack[i][0]))
             return ans
 ```
-
-
 

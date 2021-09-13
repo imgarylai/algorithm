@@ -16,11 +16,11 @@ class Solution:
             else:
                 return max(helper(i+1, j), helper(i, j+1))
         return helper(0, 0)
-        
-        
+
+
     def minDistance(self, word1: str, word2: str) -> int:
         lcs = self.longestCommonSubsequence(word1, word2)
-        
+
         return len(word1) + len(word2) - 2 * lcs
 ```
 

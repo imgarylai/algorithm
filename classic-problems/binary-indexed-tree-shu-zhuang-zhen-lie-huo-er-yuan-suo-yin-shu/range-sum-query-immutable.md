@@ -6,22 +6,22 @@
 class BIT:
     def __init__(self, n: int):
         self.sums = [0] * (n + 1)
-    
+
     def lowbit(self, i: int):
         return i & -i
-    
+
     def update(self, i:int , delta: int):
         while i < len(self.sums):
             self.sums[i] += delta
             i += self.lowbit(i)
-    
+
     def query(self, i: int) -> int:
         res = 0
         while i > 0:
             res += self.sums[i]
             i -= self.lowbit(i)
         return res
-    
+
 class NumArray:
 
     def __init__(self, nums: List[int]):

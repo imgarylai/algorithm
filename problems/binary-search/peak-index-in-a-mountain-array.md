@@ -7,8 +7,6 @@
    1. 如果下一個數字比現在的大，向右逼近
    2. 如果下一個數字比現在小或是一樣，向左逼近
 
-
-
 ```python
 class Solution:
     def peakIndexInMountainArray(self, arr: List[int]) -> int:

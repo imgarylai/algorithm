@@ -5,7 +5,7 @@
 ```python
 class Solution:
     def change(self, amount: int, coins: List[int]) -> int:
-        
+
         ans = []
         memo = {}
         def helper(target, index):
@@ -22,7 +22,7 @@ class Solution:
                     count += helper(target - coin, i)
                 memo[(target, index)] = count
             return memo[(target, index)]
-        
+
         return helper(amount, 0)
 ```
 
@@ -31,7 +31,7 @@ class Solution:
     def change(self, amount: int, coins: List[int]) -> int:
         dp = [0] * (amount + 1)
         dp[0] = 1
-        
+
         for coin in coins:
             for i in range(coin, amount + 1):
                 dp[i] += dp[i - coin]

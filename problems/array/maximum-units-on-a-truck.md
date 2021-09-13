@@ -9,12 +9,9 @@
 要解決這個問題，我們在選擇的時候有幾個條件：
 
 1. 如果我們只剩下一個空位，那一定是選擇每箱有最多商品的選項，或是換個角度想如果箱子數量遠大於車子可以裝卸的數量，我們直接把該貨物裝滿車子
-2. 每次能放進去車子的數量取決於
-   1. 車子內還剩下多少空間（remaining）
-   2. 倉庫內還有多少庫存（numberOfBoxes）
-
-* 為了要完成第一個條件，我們要盡可能地先去查看擁有最多商品數量（numberOfUnitsPerBox）的箱子 `L3`。**一開始將 boxTypes 透過 numberOfUnitsPerBox 來降冪排序**。
-* 第二個條件，可以用兩個方法追蹤：用了多少空間、還剩下多少空間。
+2. 每次能放進去車子的數量取決於 1. 車子內還剩下多少空間（remaining） 2. 倉庫內還有多少庫存（numberOfBoxes）
+3. 為了要完成第一個條件，我們要盡可能地先去查看擁有最多商品數量（numberOfUnitsPerBox）的箱子 `L3`。**一開始將 boxTypes 透過 numberOfUnitsPerBox 來降冪排序**。
+4. 第二個條件，可以用兩個方法追蹤：用了多少空間、還剩下多少空間。
 
 ```python
 class Solution:
@@ -43,6 +40,4 @@ class Solution:
             space_used += availableBoxes
         return ans
 ```
-
-
 

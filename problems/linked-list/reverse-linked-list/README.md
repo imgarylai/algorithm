@@ -2,7 +2,7 @@
 
 [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
 
-### 遞迴
+## 遞迴
 
 1. 如果當前節點沒有下一個節點，有兩種情況
    1. 這個 Linked List 只有一個節點，那返回該節點就是反轉的 Linked List 
@@ -30,7 +30,7 @@ class Solution:
         return last
 ```
 
-### 迭代
+## 迭代
 
 利用兩個指針來記憶節點
 
@@ -49,7 +49,7 @@ class Solution:
             curr.next = prev
             prev = curr
             curr = nxt
-        
+
         return prev
 ```
 

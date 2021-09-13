@@ -35,7 +35,7 @@ class Solution:
                 while (left < right and rightVal == nums[right]):
                     right -= 1
         return res
-    
+
     def nSum(self, nums, n, start, target):
         size = len(nums)
         res = []
@@ -54,8 +54,8 @@ class Solution:
                     i += 1
                 i += 1
         return res
-                
-    
+
+
     def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
         nums.sort()
         return self.nSum(nums, 4, 0, target)

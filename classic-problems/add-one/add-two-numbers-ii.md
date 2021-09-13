@@ -16,7 +16,7 @@ class Solution:
         head.next.next = head
         head.next = None
         return node
-    
+
     def addTwoNumbersOne(self, l1: ListNode, l2: ListNode) -> ListNode:
         carry = False
         head = ans = ListNode()
@@ -37,18 +37,17 @@ class Solution:
             carry = val >= 10
             ans.next = ListNode(val % 10)
             ans = ans.next
-        
+
         if carry:
             ans.next = ListNode(1)
-            
+
         return head.next
-    
+
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
         newl1 = self.reverseList(l1)
         newl2 = self.reverseList(l2)
         sumTwoNumbers = self.addTwoNumbersOne(newl1, newl2)
         res = self.reverseList(sumTwoNumbers)
         return res
-        
 ```
 

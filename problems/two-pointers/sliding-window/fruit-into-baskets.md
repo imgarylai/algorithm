@@ -13,7 +13,7 @@ class Solution:
             fruit = fruits[fast]
             fast += 1
             memo[fruit] += 1
-            
+
             while len(memo) > 2:
                 d = fruits[slow]
                 slow += 1

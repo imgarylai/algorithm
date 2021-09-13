@@ -5,12 +5,12 @@
 ```python
 class Solution:
     def numSquares(self, n: int) -> int:
-        
+
         children = [i * i for i in range(1, int(n**0.5)+1)]
-        
+
         queue = deque([n])
         level = 0
-        
+
         while queue:
             level += 1
             size = len(queue)

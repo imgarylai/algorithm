@@ -38,5 +38,3 @@ class Solution:
         return total if len(seen) == n else -1
 ```
 
-
-

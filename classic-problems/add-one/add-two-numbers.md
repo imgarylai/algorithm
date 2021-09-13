@@ -31,10 +31,10 @@ class Solution:
             carry = val >= 10
             ans.next = ListNode(val % 10)
             ans = ans.next
-        
+
         if carry:
             ans.next = ListNode(1)
-            
+
         return head.next
 ```
 

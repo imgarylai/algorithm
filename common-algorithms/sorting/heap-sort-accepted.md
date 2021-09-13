@@ -9,7 +9,7 @@ class Solution:
         def heapify(nums, n, i): 
             l = 2 * i + 1
             r = 2 * i + 2
-			
+
             largest = i
             if l < n and nums[largest] < nums[l]: 
                 largest = l 
@@ -19,9 +19,9 @@ class Solution:
 
             if largest != i: 
                 nums[i], nums[largest] = nums[largest], nums[i]
-                
+
                 heapify(nums, n, largest)
-                
+
         n = len(nums) 
 
         for i in range(n//2+1)[::-1]: 
@@ -29,6 +29,6 @@ class Solution:
 
         for i in range(n)[::-1]: 
             nums[i], nums[0] = nums[0], nums[i]
-            heapify(nums, i, 0) 
+            heapify(nums, i, 0)
 ```
 

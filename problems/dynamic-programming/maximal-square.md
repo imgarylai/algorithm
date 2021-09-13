@@ -6,7 +6,7 @@
 這個題目有動態規劃的最佳解，不過這個題目如果使用窮舉的話是不會超時的，所以我很建議可以就從窮舉來想，再看看能不能優化。
 {% endhint %}
 
-### 窮舉法
+## 窮舉法
 
 題目給定的矩陣長寬是不定的，而假設今天如果題目的矩陣全部都是 1 ，那今天在這個矩陣長方形內，最大的正方形邊長一定是長或寬的短邊。
 
@@ -29,7 +29,7 @@ class Solution:
         rows = len(matrix)
         columns = len(matrix[0])
         L = min(rows, columns) # Longer Side
-            
+
         def is_square(row, col, length):
             i = row
             while i < (row + length):
@@ -40,7 +40,7 @@ class Solution:
                     j += 1
                 i += 1
             return True
-            
+
         while L > 0: 
             i = 0
             while i < rows - L + 1:
@@ -54,7 +54,7 @@ class Solution:
         return 0
 ```
 
-### 動態規劃
+## 動態規劃
 
 如果從左上往右下開始找尋最大的正方形，一定是首先自己的位置要是 1 ，接著，去看可以來到這個位置的三個方向：上、左、左上去看看是不是都是 1 ，但是這樣我們還要繼續往回找，看看是不是都是 1 ，因此最好的方法應該是在找尋的時候，就順便記錄起來。
 
@@ -76,7 +76,7 @@ class Solution:
                 if matrix[rol-1][col-1] == '1':
                     dp[row][col] = min(dp[row-1][col], dp[row][col-1], dp[row-1][col-1]) + 1
                     m = max(dp[row][col], m)
-        
+
         return m ** 2
 ```
 

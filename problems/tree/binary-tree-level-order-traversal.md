@@ -2,7 +2,7 @@
 
 [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
 
-### BFS
+## BFS
 
 ```python
 # Definition for a binary tree node.
@@ -28,11 +28,11 @@ class Solution:
                 if node.right:
                     queue.append(node.right)
             level += 1
-        
+
         return res.values()
 ```
 
-### DFS
+## DFS
 
 ```python
 # Definition for a binary tree node.
@@ -46,15 +46,15 @@ class Solution:
         res = defaultdict(list)
         if not root:
             return []
-        
+
         def helper(node, level):            
             res[level].append(node.val)
-            
+
             if node.left:
                 helper(node.left, level + 1)
             if node.right:
                 helper(node.right, level + 1)
-            
+
         helper(root, 0)
         return res.values()
 ```

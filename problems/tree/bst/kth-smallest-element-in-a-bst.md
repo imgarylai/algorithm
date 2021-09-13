@@ -2,7 +2,7 @@
 
 [230. Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
 
-### 中序遍歷
+## 中序遍歷
 
 中序遍歷的順序，就是 BST 的大小順序
 
@@ -11,7 +11,7 @@ class Solution:
     def __init__(self):
         self.rank = 0
     def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
-    
+
         ans = root.val
         def inorder(root):
             nonlocal ans
@@ -22,12 +22,12 @@ class Solution:
             if self.rank == k:
                 ans = root.val
             inorder(root.right)
-        
+
         inorder(root)
         return ans
 ```
 
-### 迭代（中序遍歷）
+## 迭代（中序遍歷）
 
 ```text
 # Definition for a binary tree node.

@@ -7,10 +7,10 @@ class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         if len(prices) < 2:
             return 0
-        
+
         buys = [float('-inf')] * len(prices) 
         sells = [0] * len(prices) 
-        
+
         for i in range(len(prices)):
             if i == 0:
                 buys[i] = max(buys[i], 0 - prices[i])

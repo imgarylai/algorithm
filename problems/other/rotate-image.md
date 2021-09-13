@@ -11,7 +11,7 @@ class Solution:
         Do not return anything, modify matrix in-place instead.
         """
         n = len(matrix)
-        
+
         for row in range(n//2 + n %2):
             for col in range(n//2):
                 tmp = matrix[n-1-col][row]

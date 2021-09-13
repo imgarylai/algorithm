@@ -9,5 +9,3 @@ class Solution:
         return len(S) != len(nums)
 ```
 
-
-

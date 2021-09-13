@@ -16,7 +16,7 @@
 
 ```python
 for i in range(len(arr)):
-    print(arr[i]) 
+    print(arr[i])
 ```
 
 * 資料用 Array 儲存，用 while 迴圈印出每一格的資料

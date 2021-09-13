@@ -16,9 +16,9 @@
 class Solution:
     def detectCycle(self, head: ListNode) -> ListNode:
         S = set()
-        
+
         node = head
-        
+
         while node:
             if node in S:
                 return node
@@ -57,14 +57,14 @@ class Solution:
                 break
         if not meet:
             return None
-        
+
         p1 = head
         p2 = meet
-        
+
         while p1 != p2:
             p1 = p1.next
             p2 = p2.next
-        
+
         return p1
 ```
 

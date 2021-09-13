@@ -2,7 +2,7 @@
 
 [269. Alien Dictionary](https://leetcode.com/problems/alien-dictionary/)
 
-### TODO
+## TODO
 
 ```python
 class Solution:

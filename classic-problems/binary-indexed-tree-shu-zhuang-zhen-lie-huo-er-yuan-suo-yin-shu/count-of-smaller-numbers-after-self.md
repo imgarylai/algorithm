@@ -6,10 +6,10 @@
 class BinaryIndexedTree:
     def __init__(self, n: int):
         self.sums = [0] * (n + 1)
-    
+
     def lowbit(self, x):
         return x & -x
-    
+
     def update(self, i):
         while i < len(self.sums):
             self.sums[i] += 1
@@ -39,7 +39,5 @@ class Solution:
             res.append(searchResult)
             tree.update(hashTable[nums[i]] + 1)
         return res[::-1]
-        
-        
 ```
 

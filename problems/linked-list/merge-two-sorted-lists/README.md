@@ -2,7 +2,7 @@
 
 [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
 
-### 遞迴
+## 遞迴
 
 ```python
 # Definition for singly-linked list.
@@ -24,7 +24,7 @@ class Solution:
             return l2
 ```
 
-### 迭代
+## 迭代
 
 先建立一個 pseudo 的指針，判斷兩個列表當前的位置誰的值比較小，比較小的就加入到新的指針的列表當中，並且往下走一步。
 
@@ -48,7 +48,7 @@ class Solution:
                 prev.next = l2
                 l2 = l2.next
             prev = prev.next
-        
+
         prev.next = l1 if l1 else l2
         return prevHead.next
 ```

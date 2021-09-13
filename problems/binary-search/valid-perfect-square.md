@@ -9,7 +9,7 @@ class Solution:
             return True
         left = 1
         right = num // 2
-        
+
         while left <= right:
             mid = left + (right - left) // 2
             square = mid * mid
@@ -19,7 +19,7 @@ class Solution:
                 right = mid - 1
             elif square < num:
                 left = mid + 1
-        
+
         return False
 ```
 

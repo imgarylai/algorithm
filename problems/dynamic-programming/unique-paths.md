@@ -2,7 +2,7 @@
 
 [62. Unique Paths](https://leetcode.com/problems/unique-paths/)
 
-### 自頂向下
+## 自頂向下
 
 ```python
 class Solution:
@@ -18,14 +18,14 @@ class Solution:
         return dp(m, n)
 ```
 
-### 自底向上
+## 自底向上
 
 ```python
 class Solution:
     def uniquePaths(self, m: int, n: int) -> int:
         # 建立出動態規劃自底向上的表格
         dp = [[0 for _ in range(n)] for _ in range(m)]
-        
+
         # Base Case 1
         # 從起點一直向右走到底都是只有一種路徑
         for row in range(m):
@@ -35,11 +35,11 @@ class Solution:
         # 從起點一直向下走都是只有一種路徑
         for col in range(n):
             dp[0][col] = 1
-        
+
         for i in range(1, m):
             for j in range(1, n):
                 dp[i][j] = dp[i - 1][j] + dp[i][j - 1]
-        
+
         return dp[m-1][n-1]
 ```
 
@@ -49,11 +49,11 @@ class Solution:
 class Solution:
     def uniquePaths(self, m: int, n: int) -> int:
         dp = [[1 for _ in range(n)] for _ in range(m)]
-        
+
         for i in range(1, m):
             for j in range(1, n):
                 dp[i][j] = dp[i - 1][j] + dp[i][j - 1]
-        
+
         return dp[m-1][n-1]
 ```
 

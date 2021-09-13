@@ -18,7 +18,7 @@ class Solution:
         if not root:
             return root
         q = [root]
-        
+
         while q:
             size = len(q)
             for i in range(size):
@@ -29,10 +29,7 @@ class Solution:
                     q.append(node.left)
                 if node.right: 
                     q.append(node.right)
-                    
+
         return root
-        
 ```
-
-
 

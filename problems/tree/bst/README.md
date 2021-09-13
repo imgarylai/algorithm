@@ -10,5 +10,3 @@ BST 經典新增、刪除、查詢、驗證：
 
 {% page-ref page="validate-binary-search-tree.md" %}
 
-
-

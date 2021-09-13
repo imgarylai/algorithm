@@ -12,16 +12,14 @@ class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
         left = 0
         right = len(nums) - 1
-        
+
         while left < right:
             while nums[right] == val and left < right:
                 right -= 1
             if nums[left] == val:
                 nums[left], nums[right] = nums[right], nums[left]
             left += 1
-        
+
         return sum([1 for num in nums if num != val])
 ```
-
-
 

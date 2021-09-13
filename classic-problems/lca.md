@@ -5,8 +5,7 @@
 * [1644. Lowest Common Ancestor of a Binary Tree II](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-ii/)
 * [1650. Lowest Common Ancestor of a Binary Tree III](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/)
 * [1676. Lowest Common Ancestor of a Binary Tree IV](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iv/)
-
-235. 236. 1650. 1676. 的做法完全一模一樣。
+* 1. 1. 1. 的做法完全一模一樣。
 
 ```python
 class Solution:
@@ -103,7 +102,7 @@ class Solution:
             return res
 ```
 
-### 後序遍歷
+## 後序遍歷
 
 ```text
 # Definition for a binary tree node.
@@ -119,10 +118,10 @@ class Solution:
             return None
         if p == root or q == root:
             return root
-        
+
         left = self.lowestCommonAncestor(root.left, p, q)
         right = self.lowestCommonAncestor(root.right, p, q)
-        
+
         if left and right:
             return root
         if not left and not right:

@@ -13,7 +13,7 @@ class FileSystem:
 
     def __init__(self):
         self.root = TrieNode()
-        
+
     def find(self, path):
         node = self.root
         if path == '/':

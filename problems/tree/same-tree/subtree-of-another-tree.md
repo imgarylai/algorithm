@@ -8,12 +8,12 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    
+
     def isMatch(self, TreeA: TreeNode, TreeB: TreeNode):
         if not TreeA or not TreeB:
             return TreeA == TreeB
         return (TreeA.val == TreeB.val and self.isMatch(TreeA.left, TreeB.left) and self.isMatch(TreeA.right, TreeB.right))
-    
+
     def isSubtree(self, root: TreeNode, subRoot: TreeNode) -> bool:
         if self.isMatch(root, subRoot):
             return True

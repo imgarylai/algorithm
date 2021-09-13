@@ -12,7 +12,7 @@
 
 這樣的關係可以用一個遞迴的方式來呈現。
 
-### 遞迴
+## 遞迴
 
 ```python
 class Solution:
@@ -25,13 +25,13 @@ class Solution:
                 return target == 0
             else:
                 return helper(i + 1, target - nums[i]) or helper(i + 1, target)
-            
+
         return helper(0, total//2)
 ```
 
 既然遞迴的方式已經寫好了，上面這個函式很明顯的存在著重疊的子問題，例如最後一個位置的「選」或「不選」，在前面幾個元素在做選擇時，會一直重複的計算，因此可以用記憶法，來記憶著已經做過的選擇。而每個位置的選擇或不選擇，可以透過當前位置與目標來決定。
 
-### 自頂向下
+## 自頂向下
 
 ```python
 class Solution:
@@ -48,11 +48,11 @@ class Solution:
             else:
                 memo[(i, target)] = helper(i + 1, target - nums[i]) or helper(i + 1, target)
                 return memo[(i, target)]
-            
+
         return helper(0, total//2)
 ```
 
-### 自底向上
+## 自底向上
 
 一直以來我都覺得自底向上比較難想到，這題也是不太好想。
 
@@ -69,22 +69,22 @@ class Solution:
         total = sum(nums)
         if total % 2 != 0:
             return False
-        
+
         M = len(nums)
         N = total // 2
         dp = [[False] * (N + 1) for _ in range(M+1)]
-        
+
         for i in range(M+1):
             dp[i][0] = True
-            
-        
+
+
         for i in range(1, M+1):
             for j in range(1, N+1):
                 if j - nums[i - 1] < 0:
                     dp[i][j] = dp[i - 1][j]
                 else:
                     dp[i][j] = dp[i - 1][j] or dp[i - 1][j - nums[i-1]]
-                    
+
         return dp[M][N]
 ```
 

@@ -22,7 +22,7 @@ class Solution:
 
 走訪的規則很簡單，以第一個島嶼為例，如果第一個島嶼的那列 `isConnected[0]`每一個數字都是 1 ，代表的就是一號島嶼跟每個島嶼都相連，那我們就從第一個島嶼出發，往這一列的右邊去走，中間如果發現其他島嶼，就走過去看，然後就回回到跟第一個島嶼一樣的邏輯，繼續出發到沒有島嶼可以探索為止。中間就要記錄我們走訪過哪些島嶼。
 
-### DFS
+## DFS
 
 ```python
 class Solution:
@@ -37,14 +37,14 @@ class Solution:
                 if isConnected[i][j] == 1 and visited[j] == False:
                     visited[i] = True
                     dfs(j)
-            
+
         # 走訪每一個島嶼
         for i in range(n):
             if visited[i] == False:
                 visited[i] = True
                 dfs(i)
                 count += 1
-        
+
         return count
 ```
 
@@ -52,7 +52,7 @@ class Solution:
 
 空間複雜度：O\(N\)
 
-### BFS
+## BFS
 
 ```python
 class Solution:
@@ -71,8 +71,6 @@ class Solution:
                         if isConnected[x][j] == 1 and visited[j] == False:
                             queue.append(j)
                 count += 1
-        return count 
+        return count
 ```
-
-
 

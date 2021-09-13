@@ -11,16 +11,16 @@ class Solution:
         for edge in edges:
             matrix[edge[0]][edge[1]] = 1
             matrix[edge[1]][edge[0]] = 1
-        
+
         visited = set()
         count = 0
-        
+
         def dfs(i):
             for j in range(n):
                 if matrix[i][j] == 1 and j not in visited:
                     visited.add(j)
                     dfs(j)
-        
+
         for i in range(n):
             if i not in visited:
                 visited.add(i)
@@ -63,6 +63,6 @@ Hash Table 的方式也可以用陣列的取代
 graph = [[] for _ in range(n)]
 for edge in edges:
     graph[edge[0]].append(edge[1])
-    graph[edge[1]].append(edge[0])    
+    graph[edge[1]].append(edge[0])
 ```
 

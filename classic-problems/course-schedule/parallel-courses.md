@@ -10,7 +10,7 @@
 
 我們先不心急，就照搬之前的程式碼，起碼我們知道一件事情，就是給的所有的課程列表，如果有環我們就直接回傳 -1 。而且我們知道，如果要找到最後的答案，把答案找出的同時，頂多和找環的時間複雜度一樣，兩倍一樣的時間複雜度並不會真的增加我們的時間複雜度，這樣的話，不如把找環當作回答題目的一個部分，找出「最少」修課路徑是另外一個部分。寫出來再看看能不能優化。
 
-### 找出是否有環
+## 找出是否有環
 
 ```python
 class Solution:
@@ -20,7 +20,7 @@ class Solution:
         table = defaultdict(list)
         for prevCourse, nextCourse in relations:
             table[prevCourse].append(nextCourse)
-        
+
         visited = {}
         def hasCycle(currentCourse: int) -> bool:
             if currentCourse in visited:
@@ -31,7 +31,7 @@ class Solution:
                     return True
             visited[currentCourse] = False
             return visited[currentCourse]
-        
+
         for i in range(n):
             if hasCycle(i):
                 return -1
@@ -44,11 +44,11 @@ class Solution:
 
 {% page-ref page="../../problems/dynamic-programming/longest-increasing-path-in-a-matrix.md" %}
 
-### 合併
+## 合併
 
 TODO
 
-### BFS
+## BFS
 
 ```python
 class Solution:
@@ -58,7 +58,7 @@ class Solution:
         for prevCourse, nextCourse in relations:
             graph[prevCourse].append(nextCourse)
             indegree[nextCourse] += 1
-        
+
         queue = deque([])
         for node in graph:
             if indegree[node] == 0:

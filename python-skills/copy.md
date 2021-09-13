@@ -8,7 +8,7 @@ Python 陣列一共有三種拷貝
 2. 淺拷貝/複製（Shallow Copy）
 3. 深拷貝/複製（Deep Copy）
 
-### 賦值（Assignment）
+## 賦值（Assignment）
 
 ```python
 a = [1, 2, 3]
@@ -20,7 +20,7 @@ print(id(a), id(b), sep='\n')
 
 `a` 和 `b` 都是在指同一個物件。
 
-### 淺拷貝/複製（Shallow Copy）
+## 淺拷貝/複製（Shallow Copy）
 
 ```python
 a = [1, 2, 3]
@@ -40,7 +40,7 @@ for i, j in zip(a,b):
 # 4332150704 4332150704
 ```
 
-### 深拷貝/複製（Deep Copy）
+## 深拷貝/複製（Deep Copy）
 
 Python 的深拷貝就需要用到 `copy` 裡面的 `deepcopy` 但是如果用之前的方法來檢查，會發現結果怎麼還是會一樣？
 

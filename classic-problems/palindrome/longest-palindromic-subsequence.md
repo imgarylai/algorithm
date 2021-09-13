@@ -2,14 +2,14 @@
 
 [516. Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/)
 
-這一題和 [647. Palindromic Substrings](palindromic-substrings.md) 很像，只是其中的差異是一個問的是「子字串」，一個問的是「子序列」。 
+這一題和 [647. Palindromic Substrings](palindromic-substrings.md) 很像，只是其中的差異是一個問的是「子字串」，一個問的是「子序列」。
 
 子序列的排列情況會比子字串多很多，可是其實比較好想，利用回文的特性，我們要檢查的狀態就只有兩種：
 
 1. 頭尾一樣，接著繼續檢查中間的最長回文子序列。
 2. 頭尾不同，分別看先移動頭部的指標，和先移動尾部的指標，看哪邊可以拿到比較長的回文子序列。
 
-### 遞迴
+## 遞迴
 
 這樣的情況就可以寫出遞迴的關係式，其中有兩種基本狀況要處理，繼續複習回文的特性，那就是要考慮字串的長度是奇數或是偶數。
 
@@ -38,11 +38,11 @@ class Solution:
         return helper(0, len(s)-1)
 ```
 
-### 自頂向下
+## 自頂向下
 
 上面的題目，很明顯的存在重疊的子問題，因此可以透過記憶法來減少運算的次數。
 
-#### Python 內建的記憶法
+### Python 內建的記憶法
 
 ```python
 class Solution:
@@ -57,10 +57,10 @@ class Solution:
                 if s[i] == s[j]:
                     return 2 + helper(i+1, j-1)
                 else:
-                    return max(helper(i+1, j), helper(i, j-1)) 
+                    return max(helper(i+1, j), helper(i, j-1))
 ```
 
-#### 自己實作記憶法
+### 自己實作記憶法
 
 ```python
 class Solution:
@@ -83,29 +83,26 @@ class Solution:
         return helper(0, len(s)-1)
 ```
 
-### 自底向上
+## 自底向上
 
 ```python
 class Solution:
     def longestPalindromeSubseq(self, s: str) -> int:
-        
+
         l = len(s)
-        
+
         dp = [[0 for _ in range(l)] for _ in range(l)]
-        
+
         for i in range(l):
             dp[i][i] = 1
-        
+
         for start in reversed(range(l-1)):
             for end in range(start, l):
                 if s[start] == s[end]:
                     dp[start][end] = 2 + dp[start+1][end-1]
                 else:
                     dp[start][end] = max(dp[start+1][end], dp[start][end-1])
-                
+
         return dp[0][l-1]
-    
 ```
-
-
 

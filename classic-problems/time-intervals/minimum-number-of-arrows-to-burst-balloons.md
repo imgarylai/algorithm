@@ -21,7 +21,7 @@ class Solution:
                 # 等於的情況依然算是重疊
                 end = points[i][1]
                 count += 1
-                
+
         return count
 ```
 

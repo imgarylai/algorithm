@@ -36,13 +36,13 @@ class Solution:
         if not intervals:
             return True
         intervals.sort()
-        
+
         for i in range(1, len(intervals)):
             previous_begin_time, previous_end_time = intervals[i - 1]
             current_begin_time, current_end_time = intervals[i]
             if current_begin_time < previous_end_time:
                 return False
-        
+
         return True
 ```
 

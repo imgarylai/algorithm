@@ -15,7 +15,7 @@ class Solution:
             30: costs[2]
         }
         memo = {}
-        
+
         def dp(day):
             if day not in memo:
                 if day > m:

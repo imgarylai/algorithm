@@ -2,7 +2,7 @@
 
 [22. Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
 
-這一題和 [46. Permutations](permutations/) 很類似，題目要求的就是要窮舉。  
+這一題和 [46. Permutations](permutations/) 很類似，題目要求的就是要窮舉。
 
 ```python
 class Solution:
@@ -20,7 +20,7 @@ class Solution:
                 curr.append(')')
                 backtrack(curr, left, right + 1)
                 curr.pop()
-                
+
         backtrack()
         return ans
 ```

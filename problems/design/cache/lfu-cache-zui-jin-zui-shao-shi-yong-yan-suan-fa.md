@@ -21,7 +21,7 @@ class LFUCache:
         self.capacity = capacity
         self.key_to_freq = collections.defaultdict()
         self.freq_to_keys = collections.defaultdict(collections.OrderedDict)
-        self.minfreq = 0    
+        self.minfreq = 0
 ```
 
 ```python
@@ -31,7 +31,7 @@ class LFUCache:
         self.key_to_freq = collections.defaultdict()
         self.freq_to_keys = collections.defaultdict(collections.OrderedDict)
         self.minfreq = 0    
-        
+
     def get(self, key: int) -> int:
         if key not in self.key_to_freq:
             return -1

@@ -20,7 +20,7 @@ class Solution:
         table = {}
         copy = NodeCopy(root.val)
         table[root] = copy
-        
+
         queue = deque([(root, copy)])
         while queue:
             node, copy_node = queue.popleft()
@@ -32,9 +32,9 @@ class Solution:
                 copy_node.right = NodeCopy(node.right.val)
                 table[node.right] = copy_node.right
                 queue.append((node.right, copy_node.right))
-            
+
         queue = deque([root])
-        
+
         while queue:
             node = queue.popleft()
             if node.random:
@@ -44,7 +44,7 @@ class Solution:
                 queue.append(node.left)
             if node.right:
                 queue.append(node.right)
-        
+
         return table[root]
 ```
 

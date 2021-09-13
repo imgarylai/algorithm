@@ -19,7 +19,7 @@ for prerequisite in prerequisites:
 
 這張表就是前言一開始提到的**資料與圖的轉換**。
 
-### 方法一：回溯法（超時）
+## 方法一：回溯法（超時）
 
 透過最後的 For loop，我們是要檢查每一個課程，是否有一個環在內，如何確定的是否有環，就是在我們去發展這探索該樹的時候，遇到的課程是否已經造訪過了，題目的範例都沒有問題，但是這樣的方法會超時。
 
@@ -34,7 +34,7 @@ class Solution:
         for prerequisite in prerequisites:
             course, prerequisiteCourse = prerequisite
             table[course].append(prerequisiteCourse)
-        
+
         visited = set()
         def backtrack(currentCourse):
             if currentCourse in visited:
@@ -45,14 +45,14 @@ class Solution:
                     return True
             visited.remove(currentCourse)
             return False
-        
+
         for i in range(numCourses):
             if backtrack(i):
                 return False
         return True
 ```
 
-### 方法二：回溯法＋記憶
+## 方法二：回溯法＋記憶
 
 方法一會超時的原因是因為，我們會不斷地去檢查已經檢查過的樹，而更好的方法應該是，當一棵樹檢查完畢後，我們就把該課程記錄起來，讓我們知道該課程已經確定不會有環了，不用再檢查了。由於 `set()` 只能記憶著是否看過，沒辦法記憶該課程是否可以修，所以這裡可以改用 Hash Table 來記憶。
 
@@ -65,7 +65,7 @@ class Solution:
         for prerequisite in prerequisites:
             course, prerequisiteCourse = prerequisite
             table[course].append(prerequisiteCourse)
-            
+
         visited = {}
         def backtrack(currentCourse):
             if currentCourse in visited:
@@ -76,7 +76,7 @@ class Solution:
                     return True
             visited[currentCourse] = False
             return visited[currentCourse]
-        
+
         for i in range(numCourses):
             if backtrack(i):
                 return False
@@ -87,7 +87,7 @@ class Solution:
 
 這時候我會建議將 backtrack 的部分跳出來看，一整個 for 迴圈，其實就是一個**後序遍歷**， 假設，如果我們有一個正確的修課順序表，接著要印出所有的修課順序，就恰好是一個後序遍歷的結果，所以我們只要在完成後續遍歷的地方做紀錄即可。
 
-### 記錄修課順序
+## 記錄修課順序
 
 1. 如果沒有任何先修課的條件，那修課順序就直接從課程 0 一路修到課程 n - 1 為止
 2. 每一門課的去做回溯法
@@ -117,7 +117,7 @@ class Solution:
             visited[currentCourse] = False
             order.append(currentCourse)
             return visited[currentCourse]
-        
+
         for i in range(numCourses):
             if backtrack(i):
                 return []

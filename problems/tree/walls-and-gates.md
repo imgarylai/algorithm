@@ -27,14 +27,14 @@ class Solution:
 
         rows = len(rooms)
         cols = len(rooms[0])
-        
+
         for row in range(rows):
             for col in range(cols):
                 if rooms[row][col] == 0:
                     bfs(row, col)
 ```
 
-不過其實這題稍微特別一點，可以把所有的出發地點都先放進去 `queue` ，同時一起探索，這樣的話速度會快很多。 
+不過其實這題稍微特別一點，可以把所有的出發地點都先放進去 `queue` ，同時一起探索，這樣的話速度會快很多。
 
 ```python
 class Solution:
@@ -50,9 +50,9 @@ class Solution:
             for col in range(cols):
                 if rooms[row][col] == 0:
                     queue.append((row, col))
-                    
+
         directions = [(1, 0), (-1, 0), (0, 1), (0, -1)]
-        
+
         while queue:
             row, col = queue.popleft()
             for dr, dc in directions:

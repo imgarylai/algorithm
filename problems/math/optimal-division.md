@@ -29,5 +29,3 @@ class Solution:
             return '{}/({})'.format(nums[0], '/'.join(map(str, nums[1:])))
 ```
 
-
-
