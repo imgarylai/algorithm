@@ -6,6 +6,9 @@
 
 * [事前準備](preparation/preparation.md)
 * [資料結構場景](preparation/data-structure.md)
+* [複雜度分析](preparation/complexity/README.md)
+  * [時間複雜度](preparation/complexity/time-complexity.md)
+  * [空間複雜度](preparation/complexity/space-complexity.md)
 
 ## 分類題型 <a id="problems"></a>
 
