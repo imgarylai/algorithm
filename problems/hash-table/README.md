@@ -1,4 +1,4 @@
-# Hash Table/Set
+# Hash Table/Set 雜湊表
 
 在 LeetCode 裡面，Hash Table 是一個很好用而且很常用的資料結構，**增、刪、查、改**的時間複雜度是 O\(1\) 。在 Python ， Hash Table 的實作是 Dict ，而且 Python 的 Dict 有很多好用的 API 可用。
 

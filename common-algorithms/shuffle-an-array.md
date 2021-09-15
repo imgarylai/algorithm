@@ -1,4 +1,4 @@
-# 打亂陣列內的元素
+# Shuffle Array 打亂陣列內的元素
 
 [384. Shuffle ans Array](https://leetcode.com/problems/shuffle-an-array/)
 

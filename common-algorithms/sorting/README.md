@@ -1,4 +1,4 @@
-# 排序
+# Sorting 排序
 
 [912. Sort an Array](https://leetcode.com/problems/sort-an-array/)
 
