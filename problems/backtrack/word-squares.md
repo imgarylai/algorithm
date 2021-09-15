@@ -2,6 +2,8 @@
 
 [425. Word Squares](https://leetcode.com/problems/word-squares/)
 
+
+
 ```python
 class Solution:
     def wordSquares(self, words: List[str]) -> List[List[str]]:
