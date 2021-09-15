@@ -2,13 +2,13 @@
 
 * [簡介](README.md)
 
-## Preparation
+## 前言 <a id="introduction"></a>
 
-* [事前準備](preparation/preparation.md)
-* [資料結構場景](preparation/data-structure.md)
-* [複雜度分析](preparation/complexity/README.md)
-  * [時間複雜度](preparation/complexity/time-complexity.md)
-  * [空間複雜度](preparation/complexity/space-complexity.md)
+* [事前準備](introduction/preparation.md)
+* [資料結構場景](introduction/data-structure.md)
+* [複雜度分析](introduction/complexity/README.md)
+  * [時間複雜度](introduction/complexity/time-complexity.md)
+  * [空間複雜度](introduction/complexity/space-complexity.md)
 
 ## 分類題型 <a id="problems"></a>
 
