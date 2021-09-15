@@ -89,6 +89,7 @@
     * [583. Delete Operation for Two Strings](problems/dynamic-programming/longest-common-subsequence/delete-operation-for-two-strings.md)
     * [712. Minimum ASCII Delete Sum for Two Strings](problems/dynamic-programming/longest-common-subsequence/712.-minimum-ascii-delete-sum-for-two-strings.md)
   * [53. Maximum Subarray](problems/dynamic-programming/maximum-subarray.md)
+  * [152. Maximum Product Subarray](problems/dynamic-programming/maximum-product-subarray.md)
   * [139. Word Break](problems/dynamic-programming/word-break.md)
   * [Coin Change](problems/dynamic-programming/coin-change/README.md)
     * [322. Coin Change](problems/dynamic-programming/coin-change/coin-change.md)
