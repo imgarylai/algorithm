@@ -242,6 +242,7 @@
   * [48. Rotate Image](problems/other/rotate-image.md)
   * [157. Read N Characters Given Read4](problems/other/read-n-characters-given-read4/README.md)
     * [158. Read N Characters Given Read4 II - Call multiple times](problems/other/read-n-characters-given-read4/read-n-characters-given-read4-ii-call-multiple-times.md)
+  * [246. Strobogrammatic Number](problems/other/strobogrammatic-number.md)
 
 ## 經典題目 <a id="classic-problems"></a>
 
