@@ -33,6 +33,33 @@ class Solution:
 
 ### 動態規劃
 
+這個動態規劃就有點難了，我一開始想要用自頂向下的方式來寫，但是因為會有正負數的轉換，這樣會讓自頂向下的方式很難寫，於是就朝著自底向上的方式來做。
+
+即使是自底向上，一樣要處理正負數跳來跳去的問題，這一題有一個
+
+```python
+class Solution:
+    def maxProduct(self, nums: List[int]) -> int:
+        
+        n = len(nums)
+        
+        mindp = nums[0]
+        maxdp = nums[0]
+        res = nums[0]
+        
+        for i in range(1, len(nums)):
+            num = nums[i]
+            currMin = min(num, mindp*num, maxdp*num)
+            currMax = max(num, mindp*num, maxdp*num)
+            mindp = currMin
+            maxdp = currMax
+            res = max(maxdp, res)
+        
+        return res
+```
+
+Python 精簡版，可讀性較差
+
 ```python
 class Solution:
     def maxProduct(self, nums: List[int]) -> int:
