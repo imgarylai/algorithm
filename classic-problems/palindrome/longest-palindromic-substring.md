@@ -74,9 +74,90 @@ class Solution:
 
 如果是第一次寫這個題目，可以想到這個方法其實不差，不過這個解法因為他的時間複雜度是 $$O(n^3)$$ ，在面試的時候應該會繼續被問到，是不是可以提供 $$O(n^2)$$ 的方法？要想到就會比較難了。
 
+## 動態規劃
+
+動態規劃的核心思想是要判斷字串從 `i` 到 `j` 是不是一組回文，如果說 `s[i]` 和 `s[j]` 相等，又知道 `s[i-1..j-1]` 已經是回文的話，那就可以確定 `s[i..j]` 是回文，也就是說子問題是判斷更小的字串是不是回文，是的話，那只要更大的問題滿足條件像是 `s[i]` 和 `s[j]` 相等，那就可以回答 `s[i..j]` 是回文。（這裡的表示法跟 Python 不同，因為 Python 是左閉右開，用 Python 的表達方式會怪怪的。）
+
+所以這題可以用動態規劃的方式來思考
+
+{% hint style="info" %}
+`dp[i][j]` 代表的是字串 `s` 以索引 `i` 開始，到 `j` 結束的這個閉區間內，是不是回文？
+{% endhint %}
+
+狀態轉移方程式，頭尾要是一樣的字，且中間字串是回文
+
+```text
+dp[i][j] = s[i] == s[j] and dp[i+1][j-1]
+```
+
+既然是處理字串的位置，所以就有邊界的情況要處理。
+
+今天我們判斷的首尾兩個字元，又是回到了我們講的回文兩種型態，一種是回文是奇數個數，一種是回文是偶數個數。
+
+如果今天奇數個數在判斷首尾的時候，剛好是在正中心的點的左右兩側，那今天 `dp[i+1][j-1]` 其實會是 `False` ，我們要避免這種情況，所以如果今天 `j-1 - (i+1) + 1 <= 1` 的情況，那 `dp[i][j]` 應該要是 `True` ，偶數其實亦然。這就是為何 `L17` 要做這樣的判斷。
+
+```python
+class Solution:
+    def longestPalindrome(self, s: str) -> str:
+
+        n = len(s)
+
+        dp = [[False for _ in range(n)] for _ in range(n)]
+
+        for i in range(n):
+            dp[i][i] == True
+
+        start = 0
+        maxLen = 1
+
+        for end in range(1, n):
+            for begin in range(end):
+                if s[begin] != s[end]:
+                    dp[begin][end] = False
+                else:
+                    if (end - 1 - (begin + 1) + 1 <= 1):
+                        dp[begin][end] = True
+                    else:
+                        dp[begin][end] = dp[begin+1][end-1]
+                if dp[begin][end] and end - begin + 1 > maxLen:
+                    maxLen = end-begin + 1
+                    start = begin
+        
+        return s[start:start+maxLen]
+```
+
+下面是上面的程式碼整理過後的結果，但是閱讀性比較差，建議理解上方的就好，但是能夠完整了表達出動態轉移方程
+
+```python
+dp[begin][end] = s[begin] == s[end] and (dp[begin+1][end-1] or (end-begin) <= 2))
+```
+
+```python
+class Solution:
+    def longestPalindrome(self, s: str) -> str:
+
+        n = len(s)
+
+        dp = [[False for _ in range(n)] for _ in range(n)]
+
+        for i in range(n):
+            dp[i][i] == True
+        start = 0
+        maxLen = 1
+        for end in range(1, n):
+            for begin in range(end):
+                dp[begin][end] = s[begin] == s[end] and (dp[begin+1][end-1] or (end-begin) <= 2)
+                if dp[begin][end] and end - begin + 1 > maxLen:
+                    maxLen = end-begin + 1
+                    start = begin
+        return s[start:start+maxLen]
+```
+
+但是動態規劃的時間複雜度是 $$O(n^2)$$ ，我在第一次寫的時候 LeetCode 是可以通過的，但是後來複習的時候，這個方法超時了。
+
 ## 中心擴散法
 
-下一個方法是利用回文的另一個特性，那就是回文除了從兩側找，也可以從中心找，從中心判斷是不是回文的情況，其複雜度也是只有 $$O(n)$$ ，而如果我們把每個字元都當作中心點擴散，遍歷完所有的中心點也就是遍歷了字串中的所有字元，那時間複雜度也可以在 $$O(n)$$ 。最後的時間複雜度就是在 $$O(n^2)$$。
+下一個方法是利用回文的另一個特性，那就是回文除了從兩側找，也可以從中心找，從中心判斷是不是回文的情況，其複雜度也是只有 $$O(n)$$ ，而如果我們把每個字元都當作中心點擴散，遍歷完所有的中心點也就是遍歷了字串中的所有字元，那時間複雜度也可以在 $$O(n)$$ 。最壞的時間複雜度就是在 $$O(n^2)$$。
 
 但是使用中心擴散法，就要注意在 [125. Valid Palindrome](125.-valid-palindrome.md) 裡面中心擴散法要注意的是要判斷回文的長度是奇數還是偶數。
 
@@ -134,80 +215,4 @@ class Solution:
 走到這裡，是這題的的最後一個難點了，那就是我們從中間點出發了，我們要怎麼透過長度與中間點找回出發點，很簡單，既然我們在中間點，那就從中間點減去長度的一半就好，那為什麼會需要減一？一樣又是回文的奇數與偶數的情況。
 
 例如：找到的最長回文字串時，出發的中點是 7 ，如果最大長度是 5 ，那回文字串是奇數，那回文的索引範圍是：5, 6, 7, 8, 9， 起始點是 5 ，`7 - (5-1)//2 = 5` 正確。如果最大長度是 4 ，是偶數，那回文的索引範圍是：6, 7, 8, 9 ，起始點是 6 ，`7-(4-1)//2 = 6` 正確。這個減一在程式裡的除法中剛好會讓奇數少 1 偶數少 2 ，剛好是中間點的數量個數。
-
-## 動態規劃
-
-動態規劃的核心思想是要判斷字串從 `i` 到 `j` 是不是一組回文，如果說 `s[i]` 和 `s[j]` 相等，又知道 `s[i-1..j-1]` 已經是回文的話，那就可以確定 `s[i..j]` 是回文，也就是說子問題是判斷更小的字串是不是回文，是的話，那只要更大的問題滿足條件像是 `s[i]` 和 `s[j]` 相等，那就可以回答 `s[i..j]` 是回文。（這裡的表示法跟 Python 不同，因為 Python 是左閉右開，用 Python 的表達方式會怪怪的。）
-
-所以這題可以用動態規劃的方式來思考
-
-{% hint style="info" %}
-`dp[i][j]` 代表的是字串 `s` 以索引 `i` 開始，到 `j` 結束的這個閉區間內，是不是回文？
-{% endhint %}
-
-狀態轉移方程式，頭尾要是一樣的字，且中間字串是回文
-
-```text
-dp[i][j] = s[i] == s[j] and dp[i+1][j-1]
-```
-
-既然是處理字串的位置，所以就有邊界的情況要處理。
-
-今天我們判斷的首尾兩個字元，又是回到了我們講的回文兩種型態，一種是回文是奇數個數，一種是回文是偶數個數。
-
-如果今天奇數個數在判斷首尾的時候，剛好是在正中心的點的左右兩側，那今天 `dp[i+1][j-1]` 其實會是 `False` ，我們要避免這種情況，所以如果今天 `j-1 - (i+1) + 1 <= 1` 的情況，那 `dp[i][j]` 應該要是 `True` ，偶數其實亦然。這就是為何 `L17` 要做這樣的判斷。
-
-```python
-class Solution:
-    def longestPalindrome(self, s: str) -> str:
-
-        l = len(s)
-
-        dp = [[False for _ in range(l)] for _ in range(l)]
-
-        for i in range(l):
-            dp[i][i] == True
-        start = 0
-        maxLen = 1
-        for end in range(1, l):
-            for begin in range(end):
-                if s[i] != s[j]:
-                    dp[i][j] = False
-                else:
-                    if (j-1 - (i+1) + 1 <= 1):
-                        dp[i][j] = True
-                    else:
-                        dp[i][j] = dp[i+1][j-1]
-                if dp[begin][end] and end - begin + 1 > maxLen:
-                    maxLen = end-begin + 1
-                    start = begin
-        return s[start:start+maxLen]
-```
-
-下面是上面的程式碼整理過後的結果，但是閱讀性比較差，建議理解上方的就好，但是能夠完整了表達出動態轉移方程
-
-```python
-dp[begin][end] = s[begin] == s[end] and (dp[begin+1][end-1] or (end-begin) <= 2))
-```
-
-```python
-class Solution:
-    def longestPalindrome(self, s: str) -> str:
-
-        l = len(s)
-
-        dp = [[False for _ in range(l)] for _ in range(l)]
-
-        for i in range(l):
-            dp[i][i] == True
-        start = 0
-        maxLen = 1
-        for end in range(1, l):
-            for begin in range(end):
-                dp[begin][end] = s[begin] == s[end] and (dp[begin+1][end-1] or (end-begin) <= 2))
-                if dp[begin][end] and end - begin + 1 > maxLen:
-                    maxLen = end-begin + 1
-                    start = begin
-        return s[start:start+maxLen]
-```
 

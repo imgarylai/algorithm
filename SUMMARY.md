@@ -253,6 +253,7 @@
 * [Palindrome 回文](classic-problems/palindrome/README.md)
   * [125. Valid Palindrome](classic-problems/palindrome/125.-valid-palindrome.md)
   * [680. Valid Palindrome II](classic-problems/palindrome/680.-valid-palindrome-ii.md)
+  * [266. Palindrome Permutation](classic-problems/palindrome/palindrome-permutation.md)
   * [9. Palindrome Number](classic-problems/palindrome/9.-palindrome-number.md)
   * [866. Prime Palindrome](classic-problems/palindrome/prime-palindrome.md)
   * [5. Longest Palindromic Substring](classic-problems/palindrome/longest-palindromic-substring.md)
