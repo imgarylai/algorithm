@@ -343,5 +343,5 @@
 * [陣列複製](python-skills/copy.md)
 * [向矩陣中的四個方向移動](python-skills/moving-four-directions-in-matrix.md)
 * [矩陣的走法](python-skills/move-in-matrix/README.md)
-  * [矩陣遍歷的方法](python-skills/move-in-matrix/ju-zhen-bian-li-de-fang-fa.md)
+  * [矩陣遍歷的方法](python-skills/move-in-matrix/ways-to-traverse-in-matrix.md)
 
