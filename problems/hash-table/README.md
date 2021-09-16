@@ -116,7 +116,7 @@ print(freqToWord)
 
 我一時想不到很好的例子，但是我推薦可以試試看 LeetCode 上面的兩道常考的大魔王， LRU、LFU Cache。
 
-{% page-ref page="../design/cache/lru-cache-zui-jiu-wei-shi-yong-yan-suan-fa.md" %}
+{% page-ref page="../../classic-problems/cache/lru-cache-zui-jiu-wei-shi-yong-yan-suan-fa.md" %}
 
-{% page-ref page="../design/cache/lfu-cache-zui-jin-zui-shao-shi-yong-yan-suan-fa.md" %}
+{% page-ref page="../../classic-problems/cache/lfu-cache.md" %}
 
