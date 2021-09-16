@@ -2,21 +2,21 @@
 
 [146. LRU Cache](https://leetcode.com/problems/lru-cache/)
 
-LRU Cache 這種題目我會認為是 LeetCode 上面一開始直接先看解答，懂概念後再做也沒關係的題目，因為這道題目的原理並不難，不如先把所有的東西都先搞定，面試前做熟就好了，因為就算知道原理，在真正要寫出 Code 的時候太多細節需要要求了，而且就算面試中面試官跟你講解了 LRU 快取的概念，沒有看過做法，真的很難做出來。
+LRU Cache 這是一題經典題型，完全沒有概念的讀者我會建議一開始直接先看解答，懂概念後再做也沒關係的題目，因為這道題目的原理並不難，不如先把所有的東西都先搞定，面試前做熟就好了，因為就算知道原理，在真正要寫出 Code 的時候太多細節需要要求了，而且就算面試中面試官跟你講解了 LRU 快取的概念，沒有看過做法，真的很難做出來。
 
 LRU Cache 個這裡一開始我就打算直接破題，這個題目的敘述可以直接到 LeetCode 上面看。
 
-如果這輩子從來沒有寫過 LRU Cache 尤其大學不是念資工系的學生（像是我），極少數人應該可以在 45 分鐘內想到這題目需要用到 Doubly Linked List + Hash Table 。就算是上課有提到，我想教授應該也會直接跟大家講這個題目的核心觀念，基本上 LRU Cache 這種我會列為**人類智慧結晶題**，不用太折騰自己要在 45 分鐘想出並寫完，去讀懂他們的智慧結晶，準備好去面試比較重要，我們的大學考試不是都是這樣嗎？
+如果這輩子從來沒有寫過 LRU Cache 尤其大學不是念資工系的學生（像是我），極少數人應該可以在 45 分鐘內想到這題目需要用到 Doubly Linked List + Hash Table 。就算是上課有提到，我想教授應該也會直接跟大家講這個題目的核心觀念，不用太折騰自己要在 45 分鐘想出並寫完。
 
 ## 為何需要 Doubly Linked List ？
 
-Doubly Linked List 可以幫我們做兩件事情，在 O\(1\) 的時間複雜度的情況下，在新增、刪除、查看後的情況下，不斷地幫我們保持最後一次使用到的資料在這筆資料的最尾端。
+Doubly Linked List 可以幫我們做兩件事情，在 $$O(1)$$ 的時間複雜度的情況下，在**新增、刪除、查看**後的情況下，不斷地幫我們保持最後一次使用到的資料在這筆資料的最尾端。
 
-那為什麼需要雙向？因為我們在新增、刪除節點的時候，我們才能知道該節點的前一個節點的資訊，確保操作可以在時間複雜度 O\(1\) 。
+那為什麼需要雙向？因為我們在新增、刪除節點的時候，我們才能知道該節點的前一個節點的資訊，確保操作可以在時間複雜度 $$O(1) $$ 。
 
 ## 為何需要 Hash Map ？
 
-Linked List 並不像 Array 一樣可以靠位置來快速定位到我們想要的元素，所以我們需要 Hash Map ，當我們用某個 key 值來搜尋時，快速定位到 Linked List 上節點的位置。
+Linked List 並不像陣列一樣可以靠位置來快速定位到我們想要的元素，所以我們需要 Hash Map ，當我們用某個 key 值來搜尋時，快速定位到 Linked List 上節點的位置。這個概念在 [Clone 複製圖形](../../problems/hash-table/clone-graph/) 的系列問題裡面有用到。
 
 ## 實作
 
@@ -117,22 +117,28 @@ class LRUCache:
 不知道你同不同意，我前面有說到完全沒有聽過 LRU Cache 的話，很難想得到它的實作細節，但是其實在 Python 裡面有一個內建的方法很簡單，他可以快速的幫你做出 Doubly Linked List + Hash Map 的功能，那就是 `OrderDict` 這是一個有序的 `dict` 。
 
 ```python
+from collections import OrderDict
+
 class LRUCache:
     def __init__(self, capacity: int):
-        self.cache = collections.OrderedDict()
+        self.cache = OrderedDict()
         self.capacity = capacity
+    
+    def move_to_end(self, key: int) -> None:
+        val = self.cache[key]
+        del self.cache[key]
+        self.cache[key] = val
+    
     def get(self, key: int) -> int:
         if key in self.cache:
-            val = self.cache[key]
-            del self.cache[key]
-            self.cache[key] = val
+            # L11-L13 的操作在於要把元素放到最後
+            self.move_to_end(key)
             return val
         return -1
+
     def put(self, key: int, value: int) -> None:
         if key in self.cache:
-            val = self.cache[key]
-            del self.cache[key]
-            self.cache[key] = val
+            self.move_to_end(key)
         self.cache[key] = value
         if len(self.cache) > self.capacity:
             self.cache.popitem(last = False)
@@ -141,9 +147,11 @@ class LRUCache:
 而如果熟悉他的 API 的話，OrderDict 內建一個函式叫做 `move_to_end`於是可以改寫成：
 
 ```python
+from collections import OrderDict
+
 class LRUCache:
     def __init__(self, capacity: int):
-        self.cache = collections.OrderedDict()
+        self.cache = OrderedDict()
         self.capacity = capacity
 
     def get(self, key: int) -> int:
