@@ -43,6 +43,7 @@
   * [425. Word Squares](problems/backtrack/word-squares.md)
   * [140. Word Break II](problems/backtrack/word-break-ii.md)
   * [1219. Path with Maximum Gold](problems/backtrack/1219.-path-with-maximum-gold.md)
+  * [247. Strobogrammatic Number II](problems/backtrack/strobogrammatic-number-ii.md)
 * [Binary Search 二分搜索](problems/binary-search/README.md)
   * [Rotated Array 旋轉陣列問題](problems/binary-search/rotated-array/README.md)
     * [33. Search in Rotated Sorted Array](problems/binary-search/rotated-array/search-in-rotated-sorted-array.md)

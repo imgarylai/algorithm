@@ -10,6 +10,8 @@
 
 遍歷的時候可以去判斷，如果一個字元沒有在字典裡面出現，那就一定沒辦法變成 Strobogrammatic Number ，可以提早的返回 False ，組合完兩個字串後互相比較就好了。
 
+時間複雜度為 $$O(n) $$ 。
+
 ```python
 class Solution:
     def isStrobogrammatic(self, num: str) -> bool:
