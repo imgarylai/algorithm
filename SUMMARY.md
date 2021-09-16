@@ -287,7 +287,7 @@
     * [445. Add Two Numbers II](classic-problems/add-one/add-two-numbers/add-two-numbers-ii.md)
   * [989. Add to Array-Form of Integer](classic-problems/add-one/989.-add-to-array-form-of-integer.md)
 * [Cache 快取問題](classic-problems/cache/README.md)
-  * [LRU Cache 最久未使用演算法](classic-problems/cache/lru-cache-zui-jiu-wei-shi-yong-yan-suan-fa.md)
+  * [LRU Cache 最久未使用演算法](classic-problems/cache/lru-cache.md)
   * [LFU Cache 最近最少使用演算法](classic-problems/cache/lfu-cache.md)
 * [n Sum 問題](classic-problems/nsum/README.md)
   * [1. 2 Sum](classic-problems/nsum/2-sum.md)
