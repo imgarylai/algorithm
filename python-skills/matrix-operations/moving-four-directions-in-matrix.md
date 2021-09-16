@@ -9,5 +9,5 @@ for drow, dcol in directions:
         # Do Something
 ```
 
-{% page-ref page="../classic-problems/robot-bounded-in-circle.md" %}
+{% page-ref page="../../classic-problems/robot-bounded-in-circle.md" %}
 
