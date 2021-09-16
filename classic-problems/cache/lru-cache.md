@@ -16,7 +16,7 @@ Doubly Linked List 可以幫我們做兩件事情，在 $$O(1)$$ 的時間複雜
 
 ## 為何需要 Hash Map ？
 
-Linked List 並不像陣列一樣可以靠位置來快速定位到我們想要的元素，所以我們需要 Hash Map ，當我們用某個 key 值來搜尋時，快速定位到 Linked List 上節點的位置。這個概念在 [Clone 複製圖形](../../problems/hash-table/clone-graph/) 的系列問題裡面有用到。
+Linked List 並不像陣列一樣可以靠位置來快速定位到我們想要的元素，所以我們需要 Hash Map ，當我們用某個 key 值來搜尋時，快速定位到 Linked List 上節點的位置。這個概念在 [Clone 複製圖形](../clone-graph/) 的系列問題裡面有用到。
 
 ## 實作
 
