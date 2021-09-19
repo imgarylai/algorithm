@@ -93,7 +93,6 @@
   * [115. Distinct Subsequences](problems/dynamic-programming/115.-distinct-subsequences.md)
   * [416. Partition Equal Subset Sum](problems/dynamic-programming/partition-equal-subset-sum.md)
   * [10. Regular Expression Matching](problems/dynamic-programming/10.-regular-expression-matching.md)
-  * [887. Super Egg Drop](problems/dynamic-programming/super-egg-drop.md)
   * [651. 4 Keys Keyboard](problems/dynamic-programming/651.-4-keys-keyboard.md)
 * [Hash Table/Set 雜湊表](problems/hash-table/README.md)
   * [242. Valid Anagram](problems/hash-table/valid-anagram.md)
@@ -322,6 +321,7 @@
 * [Word Ladder 文字梯問題](classic-problems/word-ladder/README.md)
   * [127. Word Ladder](classic-problems/word-ladder/127.-word-ladder.md)
   * [126. Word Ladder II](classic-problems/word-ladder/126.-word-ladder-ii.md)
+* [Egg Drop 高樓扔雞蛋](classic-problems/egg-drop.md)
 
 ## 常見演算法 <a id="common-algorithms"></a>
 
