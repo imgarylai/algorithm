@@ -292,6 +292,8 @@
   * [1. 2 Sum](classic-problems/nsum/2-sum.md)
   * [167. Two Sum II - Input array is sorted](classic-problems/nsum/two-sum-ii-input-array-is-sorted.md)
   * [170. Two Sum III - Data structure design](classic-problems/nsum/two-sum-iii-data-structure-design.md)
+  * [16. 3Sum Closest](classic-problems/nsum/3sum-closest.md)
+  * [259. 3Sum Smaller](classic-problems/nsum/3sum-smaller.md)
   * [n Sum](classic-problems/nsum/n-sum.md)
 * [Lowest Common Ancestor of a Binary Tree 最近共同祖先問題](classic-problems/lca.md)
 * [The Maze 球滾迷宮問題](classic-problems/the-maze/README.md)
