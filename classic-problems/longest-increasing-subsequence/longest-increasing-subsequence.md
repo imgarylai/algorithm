@@ -2,20 +2,9 @@
 
 [300. Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
 
-這一個題目是比較容易用直覺判斷出是動態規劃的題目，難的地方是他的動態轉移方程。
+這一個題目是比較容易用直覺判斷出是動態規劃的題目，難的地方是這個題目的動態轉移方程式，這一個題目，如果要想到動態轉移方程式的話，那就是我們在第 `i` 個位置的時候，其意義為何？
 
-首先先想`dp[i]` 要記錄的是什麼？是如果到 `num[i]` 這個位置時， 最長遞增子序列的長度。
-
-例如：
-
-```text
-# 題目
-nums = [0,1,0,3,2,3]
-# 當 i == 1 時
-dp[i] => 2
-```
-
-基本的型態會是什麼？最長的遞增子序列就只有自己而已，那時候 dp\[i\] 就會是 1 。
+先從基本的型態會是什麼？最長的遞增子序列就只有自己而已，那時候 `dp[i]` 就會是 `1` 。
 
 這時候我們想要知道的就是 當我們已經知道 `dp[0..i-1]` 的所有數值時，要怎麼求 `dp[i]` 的數值？
 
@@ -23,12 +12,11 @@ dp[i] => 2
 
 找到之後，就是第二個步驟，這些比 `nums[i]` 還小的數字，**他們當時的最長遞增子序列的長度為何？**候選人可能有很多，但是我們知道一定是要找最長的那個，這時候就可以更新我們自己的最長遞增子序列的長度 `dp[i]` 。更新的方式如下：
 
-```text
-dp[i] = max(dp[i], dp[j] + 1) 
-# j is the index which is smaller than i and contributes the longest increasing subsequence.
+```python
+dp[i] = max([1 + dp[j] for j in range(i) if nums[j] < nums[i]], default=dp[i])
+# j is the index which is smaller than i and contributes the 
+# longest increasing subsequence.
 ```
-
-最後的答案。
 
 ```python
 class Solution:
@@ -36,11 +24,7 @@ class Solution:
         dp = [1] * len(nums)
 
         for i in range(1, len(nums)):
-            for j in range(i):
-                if nums[j] >= nums[i]:
-                    continue
-                else:
-                    dp[i] = max(dp[i], dp[j]+1)
+            dp[i] = max([1 + dp[j] for j in range(i) if nums[j] < nums[i]], default=dp[i])
 
         return max(dp)
 ```
@@ -49,9 +33,19 @@ class Solution:
 
 ## 補充
 
-這個題目其實有一個更快的解法，時間複雜度只要 $$O(nlogn)$$ ，是使用一個叫做[耐心排序\(Patience sorting\)](https://en.wikipedia.org/wiki/Patience_sorting)的方法。
+這個題目其實有一個更快的解法，時間複雜度只要 $$O(nlogn)$$ ，是使用一個叫做 [耐心排序\(Patience sorting\)](https://en.wikipedia.org/wiki/Patience_sorting)的方法。
 
 講解得最好的講義：[https://www.cs.princeton.edu/courses/archive/spring13/cos423/lectures/LongestIncreasingSubsequence.pdf](https://www.cs.princeton.edu/courses/archive/spring13/cos423/lectures/LongestIncreasingSubsequence.pdf)
+
+這個演算法的做法，很像是把一個亂數的鋪克牌的按照以下規則分成幾個牌堆。
+
+當我現在手上有一張撲克牌時
+
+1. 如果還沒有任何的牌堆，那這張卡就會建立成一個牌堆
+2. 如果已經有牌堆，我要找到牌堆中最上面的數字，比我大的牌堆，如果有多個牌堆滿足此情況，我要選擇最左邊的牌堆。
+3. 如果已經有牌堆，但是每個牌堆最上面的數字都比手上這張撲克牌小，則建立新牌堆
+
+按照這樣的方式來分類牌堆，最後每一組的最上面的數字，就會是一個上升遞增子序列，最後總共有幾個牌堆就是代表有最長遞增子序列。
 
 ```python
 class Solution:

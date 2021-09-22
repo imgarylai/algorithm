@@ -16,11 +16,11 @@ class Solution:
         rows = len(grid)
         columns = len(grid[0])
         island = 0
-        def dfs(r, c):
+        def dfs(grid, r, c):
             grid[r][c] = '#'
             for dr, dc in directions:
                 if 0 <= r + dr < rows and 0 <= c + dc < columns and grid[r+dr][c+dc] == '1':
-                    dfs(r + dr, c + dc)    
+                    dfs(grid, r + dr, c + dc)    
         for i in range(rows):
             for j in range(columns):
                 if grid[i][j] == '1':
