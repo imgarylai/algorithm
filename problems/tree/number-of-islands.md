@@ -2,34 +2,39 @@
 
 [200. Number of Islands](https://leetcode.com/problems/number-of-islands/)
 
-1. 要如何標記已經造訪過的元素
-2. 如何在矩陣中行走
+這一題的重點在於於圖形中，進行深度優先搜索或是廣度優先搜索的遍歷。
 
-## DFS
+今天的題目條件在於，如果一個陸地屬於一個島嶼的話，那該陸地一定是與其他陸地的四個方向之一有相連，要計算出有幾個島嶼，我只要站在島嶼上的任何一塊陸地，把該島嶼全部都標記成已經造訪過，那我就可以確定這個島嶼已經造訪完畢，計數器加一，接著再繼續找到下一個尚未被標記的陸地即可。
+
+### 深度優先搜索
 
 ```python
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
-        if not grid or not grid[0]:
-            return 0
-        directions = [(1, 0), (0, 1), (-1, 0), (0, -1)]
         rows = len(grid)
-        columns = len(grid[0])
-        island = 0
-        def dfs(grid, r, c):
-            grid[r][c] = '#'
+        cols = len(grid[0])
+        directions = [(1, 0), (0, 1), (-1, 0), (0, -1)]
+        
+        def dfs(row, col):
+            grid[row][col] = '#'
             for dr, dc in directions:
-                if 0 <= r + dr < rows and 0 <= c + dc < columns and grid[r+dr][c+dc] == '1':
-                    dfs(grid, r + dr, c + dc)    
-        for i in range(rows):
-            for j in range(columns):
-                if grid[i][j] == '1':
-                    island += 1
-                    dfs(grid, i, j)
-        return island
+                next_row = row+dr
+                next_col = col+dc
+                if 0 <= next_row < rows and 0 <= next_col < cols and grid[next_row][next_col] == '1':
+                    dfs(next_row, next_col)
+                    
+        islands = 0
+        
+        for row in range(rows):
+            for col in range(cols):
+                if grid[row][col] == '1':
+                    islands += 1
+                    dfs(row, col)
+                    
+        return islands 
 ```
 
-## BFS
+### 廣度優先搜索
 
 ```python
 class Solution:
