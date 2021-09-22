@@ -8,7 +8,10 @@
 
 BFS 的優勢在於如果要查找圖或是樹的最短距離，BFS 可以在找到目標後快速地停止探索。DFS 在查找最短距離時，要把所有的可行解都找到，才能比較出最短路徑。
 
-另外 BFS 還有一個優勢，那就是 BFS 是可以做到多點同時出發的，把不同的出發點視作是同一層即可，如 [417. Pacific Atlantic Water Flow](pacific-atlantic-water-flow.md) 。
+另外 BFS 還有一個優勢，那就是 BFS 是可以做到多點同時出發的，把不同的出發點視作是同一層即可
+
+* [286. Walls and Gates](walls-and-gates.md)
+* [417. Pacific Atlantic Water Flow](pacific-atlantic-water-flow.md) 
 
 ### Depth-first search 深度優先搜索
 
@@ -19,6 +22,10 @@ DFS 是一個遞迴關係式，DFS 的優勢在於如果只是要找到一個目
 3. [Postorder 後序遍歷](postorder/)
 
 另外 [Backtrack 回溯法](../backtrack/) 也可以看做是一種 DFS 的變形。
+
+而有些時候，一些樹的結構在做 DFS 時，其子樹的遞迴關係式，會產生出重複的子問題，當重複的子問題出現時，就可以用自頂向下的方式進行優化。
+
+* [279. Perfect Squares](perfect-squares.md)
 
 
 
