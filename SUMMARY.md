@@ -225,6 +225,7 @@
   * [553. Optimal Division](problems/math/optimal-division.md)
   * [204. Count Primes](problems/math/count-primes.md)
   * [372. Super Pow](problems/math/super-pow.md)
+  * [829. Consecutive Numbers Sum](problems/math/consecutive-numbers-sum.md)
 * [Other 其他](problems/other/README.md)
   * [31. Next Permutation](problems/other/next-permutation.md)
   * [1446. Consecutive Characters](problems/other/consecutive-characters.md)
