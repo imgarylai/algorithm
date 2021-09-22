@@ -2,9 +2,9 @@
 
 [56. Merge Intervals](https://leetcode.com/problems/merge-intervals/)
 
-這題只要解過了 252, 253 ，就會非常的簡單
+這題只要解過了 [252. Meeting Rooms](meeting-rooms-1.md) 、 [253. Meeting Rooms II](meeting-rooms-ii-1.md) 就會非常的簡單。
 
-252 有教過了我們如何判斷區間重疊，這一個題目是我們要如何把重疊的區間都合併起來，並且給出所有的新時間區間。
+[252. Meeting Rooms](meeting-rooms-1.md) 有教過了我們如何判斷區間重疊，這一個題目是我們要如何把重疊的區間都合併起來，並且給出所有的新時間區間。
 
 這個題目還算好想一點，既然我們知道結果是一個陣列，那我們一開始就把第一個時間區間放到儲存結果的陣列，假設就只有一個時間區間，這就會是答案了。
 
