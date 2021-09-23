@@ -134,6 +134,7 @@
   * [279. Perfect Squares](problems/tree/perfect-squares.md)
   * [286. Walls and Gates](problems/tree/walls-and-gates.md)
   * [417. Pacific Atlantic Water Flow](problems/tree/pacific-atlantic-water-flow.md)
+  * [994. Rotting Oranges](problems/tree/rotting-oranges.md)
   * [Preorder 前序遍歷](problems/tree/preorder/README.md)
     * [105. Construct Binary Tree from Preorder and Inorder Traversal](problems/tree/preorder/construct-binary-tree-from-preorder-and-inorder-traversal.md)
     * [144. Binary Tree Preorder Traversal](problems/tree/preorder/144.-binary-tree-preorder-traversal.md)

@@ -12,6 +12,7 @@ BFS 的優勢在於如果要查找圖或是樹的最短距離，BFS 可以在找
 
 * [286. Walls and Gates](walls-and-gates.md)
 * [417. Pacific Atlantic Water Flow](pacific-atlantic-water-flow.md) 
+* [994. Rotting Oranges](rotting-oranges.md)
 
 ### Depth-first search 深度優先搜索
 
