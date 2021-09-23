@@ -1,6 +1,6 @@
 # 261. Graph Valid Tree
 
-dfs 搜尋的重點是，鄰居可以是 parent ，但是如果不是 parent 卻曾經造訪過，就代表這棵樹裡面有閉圈。
+DFS 搜尋的重點是，鄰居可以是 parent ，但是如果不是 parent 卻曾經造訪過，就代表這棵樹裡面有閉圈。
 
 ```python
 class Solution:

@@ -2,7 +2,7 @@
 
 [54. Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)
 
-這一題的重點在於如果要在矩陣四個方向中行走要怎麼走，像是 [200. Number of Islands](../tree/number-of-islands.md) 也有用到。
+這一題的重點在於如果要在矩陣四個方向中行走要怎麼走，像是 [200. Number of Islands](../tree/breadthfirst-search/number-of-islands.md) 也有用到。
 
 ```python
 class Solution:
