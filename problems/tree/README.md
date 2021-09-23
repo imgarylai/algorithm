@@ -28,5 +28,5 @@ DFS 是一個遞迴關係式，DFS 的優勢在於如果只是要找到一個目
 
 * [279. Perfect Squares](breadthfirst-search/perfect-squares.md)
 
-
+其實 BFS 和 DFS 不一定只能在樹來用，圖形也是可以使用 BFS 和 DFS ，還有一種是題目給的是給兩點之間的資訊，這時候要先轉成圖形的資訊。
 

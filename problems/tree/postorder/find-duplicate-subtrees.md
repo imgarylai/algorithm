@@ -2,11 +2,7 @@
 
 [652. Find Duplicate Subtrees](https://leetcode.com/problems/find-duplicate-subtrees/)
 
-建議先做過
-
-{% page-ref page="../serialization-and-deserialization/construct-binary-tree-from-string.md" %}
-
-{% page-ref page="../serialization-and-deserialization/construct-string-from-binary-tree.md" %}
+建議先做過 [536. Construct Binary Tree from String](../serialization-and-deserialization/construct-binary-tree-from-string.md) 和 [606. Construct String from Binary Tree](../serialization-and-deserialization/construct-string-from-binary-tree.md) 。
 
 這題一開始真的很不好想，因為如果單純從樹的角度來想，基本上要確定兩個樹是一樣的，就一定要遍歷整棵樹，這樣的話要暴力窮舉嗎？要暴力窮舉一棵樹，還是需要一個記憶的方式來看看是否有一樣的樹，**所以這個題目要想的是，如何記憶樹的結構**。
 
