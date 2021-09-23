@@ -8,6 +8,7 @@ class Solution:
         lexicalOrder = sorted(word)
         counter = collections.Counter(lexicalOrder)
         return counter[lexicalOrder[0]]
+    
     def numSmallerByFrequency(self, queries: List[str], words: List[str]) -> List[int]:
         queryFreqs = [self.f(query) for query in queries]
         wordFreqs = [self.f(word) for word in words]
