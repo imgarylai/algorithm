@@ -179,6 +179,7 @@
   * [102. Binary Tree Level Order Traversal](problems/tree/binary-tree-level-order-traversal.md)
   * [547. Number of Provinces](problems/tree/number-of-provinces.md)
   * [261. Graph Valid Tree](problems/tree/graph-valid-tree.md)
+  * [1971. Find if Path Exists in Graph](problems/tree/find-if-path-exists-in-graph.md)
   * [323. Number of Connected Components in an Undirected Graph](problems/tree/number-of-connected-components-in-an-undirected-graph.md)
   * [250. Count Univalue Subtrees](problems/tree/count-univalue-subtrees.md)
   * [222. Count Complete Tree Nodes](problems/tree/count-complete-tree-nodes.md)
