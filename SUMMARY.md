@@ -241,7 +241,7 @@
   * [710. Random Pick with Blacklist](wu-jian-dao-xiang-she-ji/design/710.-random-pick-with-blacklist.md)
   * [380. Insert Delete GetRandom O\(1\)](wu-jian-dao-xiang-she-ji/design/insert-delete-getrandom-o-1.md)
   * [271. Encode and Decode Strings](wu-jian-dao-xiang-she-ji/design/encode-and-decode-strings.md)
-  * [348. Design Tic-Tac-Toe](wu-jian-dao-xiang-she-ji/design/348.-design-tic-tac-toe.md)
+  * [348. Design Tic-Tac-Toe](wu-jian-dao-xiang-she-ji/design/design-tic-tac-toe.md)
 
 ## 經典題目 <a id="classic-problems"></a>
 
