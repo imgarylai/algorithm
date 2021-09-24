@@ -64,10 +64,6 @@
   * [1011. Capacity To Ship Packages Within D Days](problems/binary-search/capacity-to-ship-packages-within-d-days.md)
   * [173. Binary Search Tree Iterator](problems/binary-search/173.-binary-search-tree-iterator.md)
   * [1586. Binary Search Tree Iterator II](problems/binary-search/1586.-binary-search-tree-iterator-ii.md)
-* [Design 物件導向設計](problems/design/README.md)
-  * [710. Random Pick with Blacklist](problems/design/710.-random-pick-with-blacklist.md)
-  * [380. Insert Delete GetRandom O\(1\)](problems/design/insert-delete-getrandom-o-1.md)
-  * [271. Encode and Decode Strings](problems/design/encode-and-decode-strings.md)
 * [Dynamic Programming 動態規劃](problems/dynamic-programming/README.md)
   * [509. Fibonacci Number](problems/dynamic-programming/fibonacci-number.md)
   * [70. Climbing Stairs](problems/dynamic-programming/climbing-stairs.md)
@@ -238,6 +234,14 @@
   * [157. Read N Characters Given Read4](problems/other/read-n-characters-given-read4/README.md)
     * [158. Read N Characters Given Read4 II - Call multiple times](problems/other/read-n-characters-given-read4/read-n-characters-given-read4-ii-call-multiple-times.md)
   * [246. Strobogrammatic Number](problems/other/strobogrammatic-number.md)
+
+## 物件導向設計
+
+* [Design 物件導向設計](wu-jian-dao-xiang-she-ji/design/README.md)
+  * [710. Random Pick with Blacklist](wu-jian-dao-xiang-she-ji/design/710.-random-pick-with-blacklist.md)
+  * [380. Insert Delete GetRandom O\(1\)](wu-jian-dao-xiang-she-ji/design/insert-delete-getrandom-o-1.md)
+  * [271. Encode and Decode Strings](wu-jian-dao-xiang-she-ji/design/encode-and-decode-strings.md)
+  * [348. Design Tic-Tac-Toe](wu-jian-dao-xiang-she-ji/design/348.-design-tic-tac-toe.md)
 
 ## 經典題目 <a id="classic-problems"></a>
 

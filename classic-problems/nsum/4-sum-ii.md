@@ -10,6 +10,10 @@
 
 有一件事情要注意的是，從前面兩個陣列隨機挑選兩的個數字，其總和為 `k` 的情況其實有很多種，假設有 `x` 種，那後面兩個陣列每次找出總和為 `-k` 的情況，就可以組合出 `x` 種組合。
 
+因此在計算答案時，要記得累加可以組合的情況。
+
+這​樣的方式時間複雜度可以降低到只要在 $$O(n^2) $$ 。
+
 ```python
 class Solution:
     def fourSumCount(self, nums1: List[int], nums2: List[int], nums3: List[int], nums4: List[int]) -> int:
