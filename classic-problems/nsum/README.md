@@ -1,11 +1,11 @@
 # n Sum 問題
 
 * 1. [2 Sum](https://leetcode.com/problems/two-sum/)
-* [15. 3 Sum](https://leetcode.com/problems/3sum/)
-* [18. 4 Sum](https://leetcode.com/problems/4sum/)
+* [15. 3 Sum](3sum.md)
+* [18. 4 Sum](4sum.md)
 * [167. Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
 * [170. Two Sum III - Data structure design](https://leetcode.com/problems/two-sum-iii-data-structure-design/)
-* [454. 4 Sum II](https://leetcode.com/problems/4sum-ii/)
+* [454. 4 Sum II](4-sum-ii.md)
 * [653. Two Sum IV - Input is a BST](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/)
 * [1099. Two Sum Less Than K](https://leetcode.com/problems/two-sum-less-than-k/)
 * [1679. Max Number of K-Sum Pairs](https://leetcode.com/problems/max-number-of-k-sum-pairs/)
