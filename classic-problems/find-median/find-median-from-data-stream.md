@@ -2,6 +2,12 @@
 
 [295. Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
 
+這題如果透過排序的話，就會很好做，但是如果只是排序的話，時間複雜度是 $$O(nlogn)$$ 
+
+這題要利用的是 `Heap` 的特性，只要我們可以讓「最大」或是「最小」的數字始終保持在樹的最上方。
+
+這樣的話時間複雜度可以保持在 $$O(logn)$$ 
+
 ```python
 import heapq
 class MedianFinder:
