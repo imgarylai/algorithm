@@ -6,7 +6,7 @@
 * [167. Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
 * [170. Two Sum III - Data structure design](https://leetcode.com/problems/two-sum-iii-data-structure-design/)
 * [454. 4 Sum II](4-sum-ii.md)
-* [653. Two Sum IV - Input is a BST](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/)
+* [653. Two Sum IV - Input is a BST](two-sum-iv-input-is-a-bst.md)
 * [1099. Two Sum Less Than K](https://leetcode.com/problems/two-sum-less-than-k/)
 * [1679. Max Number of K-Sum Pairs](https://leetcode.com/problems/max-number-of-k-sum-pairs/)
 
