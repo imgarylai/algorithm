@@ -1,8 +1,6 @@
 # 323. Number of Connected Components in an Undirected Graph
 
-可以繼承 547 的做法，先轉換給定的 edges 成一個矩陣。
-
-{% page-ref page="number-of-provinces.md" %}
+可以繼承 [547. Number of Provinces](number-of-provinces.md) 的做法，先轉換給定的 edges 成一個矩陣。
 
 ```python
 class Solution:
@@ -64,5 +62,34 @@ graph = [[] for _ in range(n)]
 for edge in edges:
     graph[edge[0]].append(edge[1])
     graph[edge[1]].append(edge[0])
+```
+
+### Union Find
+
+```python
+class Solution:
+    def countComponents(self, n: int, edges: List[List[int]]) -> int:
+        roots = [i for i in range(n)]
+        
+        def find(x):
+            while x != roots[x]:
+                x = roots[x]
+            return x
+        
+        def union(x, y):
+            rootX = find(x)
+            rootY = find(y)
+            if rootX != rootY:
+                roots[rootX] = rootY
+                return True
+            else:
+                return False
+        
+        
+        count = n
+        for x, y in edges:
+            if union(x, y):
+                count -= 1
+        return count
 ```
 
