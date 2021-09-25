@@ -8,6 +8,8 @@
 
 第二個是可以利用 heap 的特色，保持 k 個最小值的特色，只是這裡要 pop 掉的是最大值，所以存進去時，要用 max heap 的方式來做。
 
+時間複雜度： $$O(nlogk)$$ 
+
 ```python
 class Solution:
     def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
