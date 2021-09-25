@@ -2,11 +2,7 @@
 
 [536. Construct Binary Tree from String](https://leetcode.com/problems/construct-binary-tree-from-string/)
 
-{% hint style="info" %}
-做這題之前可以先完成
-{% endhint %}
-
-{% page-ref page="construct-string-from-binary-tree.md" %}
+做這題之前可以先完成 [606. Construct String from Binary Tree](construct-string-from-binary-tree.md) 。
 
 這題的基礎題目是要將一棵樹字串化，用到的方法是後序遍歷，到了這個題目，目標在於要分析出一串字串的結構，進而不斷地頗析其子樹，而子樹的結構的樣式為：
 

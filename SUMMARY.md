@@ -166,6 +166,7 @@
     * [606. Construct String from Binary Tree](problems/tree/serialization-and-deserialization/construct-string-from-binary-tree.md)
     * [536. Construct Binary Tree from String](problems/tree/serialization-and-deserialization/construct-binary-tree-from-string.md)
     * [297. Serialize and Deserialize Binary Tree](problems/tree/serialization-and-deserialization/serialize-and-deserialize-binary-tree.md)
+    * [428. Serialize and Deserialize N-ary Tree](problems/tree/serialization-and-deserialization/serialize-and-deserialize-n-ary-tree.md)
   * [Graph 圖](problems/tree/graph/README.md)
     * [1971. Find if Path Exists in Graph](problems/tree/graph/find-if-path-exists-in-graph.md)
     * [323. Number of Connected Components in an Undirected Graph](problems/tree/graph/number-of-connected-components-in-an-undirected-graph.md)
