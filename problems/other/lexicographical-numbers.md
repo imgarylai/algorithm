@@ -12,5 +12,5 @@ class Solution:
 
 ## 參考
 
-{% page-ref page="../../python-skills/sorting.md" %}
+{% page-ref page="../../classic-problems/sorting/" %}
 

@@ -217,6 +217,7 @@
   * [992. Subarrays with K Different Integers](problems/sliding-window/subarrays-with-k-different-integers.md)
   * [713. Subarray Product Less Than K](problems/sliding-window/subarray-product-less-than-k.md)
   * [862. Shortest Subarray with Sum at Least K](problems/sliding-window/shortest-subarray-with-sum-at-least-k.md)
+  * [239. Sliding Window Maximum](problems/sliding-window/sliding-window-maximum.md)
 * [Bit Manipulation 位元運算](problems/bit-manipulation/README.md)
   * [136. Single Number](problems/bit-manipulation/untitled.md)
   * [7. Reverse Integer](problems/bit-manipulation/reverse-integer.md)
@@ -339,6 +340,8 @@
   * [127. Word Ladder](classic-problems/word-ladder/127.-word-ladder.md)
   * [126. Word Ladder II](classic-problems/word-ladder/126.-word-ladder-ii.md)
 * [Egg Drop 高樓扔雞蛋](classic-problems/egg-drop.md)
+* [Custom sorting 排序技巧](classic-problems/sorting/README.md)
+  * [937. Reorder Data in Log Files](classic-problems/sorting/937.-reorder-data-in-log-files.md)
 
 ## 常見演算法 <a id="common-algorithms"></a>
 
@@ -356,7 +359,6 @@
 
 ## Python 技巧 <a id="python-skills"></a>
 
-* [排序技巧](python-skills/sorting.md)
 * [陣列複製](python-skills/copy.md)
 * [矩陣操作](python-skills/matrix-operations/README.md)
   * [向矩陣中的四個方向移動](python-skills/matrix-operations/moving-four-directions-in-matrix.md)
