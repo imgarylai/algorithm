@@ -10,6 +10,8 @@
 
 * `['hello', 'word']`  -&gt; `005hello004word` 
 
+也就是說每次都會讀一個固定的記憶體大小來得知資訊。
+
 ```python
 class Codec:
     def __init__(self, size = 3):
