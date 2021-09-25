@@ -2,92 +2,9 @@
 
 [297. Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
 
-## Construct from 536 and 606
+這一題可以透過 [536. Construct Binary Tree from String](construct-binary-tree-from-string.md) 和 [606. Construct String from Binary Tree](construct-string-from-binary-tree.md) 的解答直接回答答，不過上述兩個問題的解法都不是很容易，在面試中要全部寫出來且沒有錯誤其實是有點難的，答案太長了礙於篇幅就暫時略過，直接複製貼上就可以了。
 
-```python
-# Definition for a binary tree node.
-# class TreeNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-
-class Codec:
-
-    def serialize(self, root):
-        """Encodes a tree to a single string.
-
-        :type root: TreeNode
-        :rtype: str
-        """
-        def traverse(root):
-            if not root:
-                return ''
-            left = traverse(root.left)
-            right = traverse(root.right)
-            if len(left) == 0 and len(right) == 0:
-                return str(root.val)
-            elif len(left) == 0:
-                return str(root.val) + '()' + '(' + right  +')'
-            elif len(right) == 0:
-                return str(root.val) + '(' + left  +')'
-            return str(root.val) + '(' + left + ')' + '(' + right  +')'
-
-        return traverse(root)
-
-    def deserialize(self, data):
-        """Decodes your encoded data to tree.
-
-        :type data: str
-        :rtype: TreeNode
-        """
-        def traverse(s, begin):
-            end = begin
-            if begin == len(s):
-                return None
-            while end < len(s) and (s[end].isdigit() or s[end] == '-'):
-                end += 1
-            root = TreeNode(int(s[begin:end]))
-            begin = end
-            if end < len(s) and s[end] == '(':
-                stack = []
-                stack.append(s[end])
-                end += 1
-                while end < len(s) and stack:
-                    if s[end] == '(':
-                        stack.append(s[end])
-                    if s[end] == ')':
-                        stack.pop()
-                    end += 1
-                root.left = traverse(s[begin+1:end-1], 0)
-            begin = end
-            if end < len(s) and s[end] == '(':
-                stack = []
-                stack.append(s[end])
-                end += 1
-                while end < len(s) and stack:
-                    if s[end] == '(':
-                        stack.append(s[end])
-                    if s[end] == ')':
-                        stack.pop()
-                    end += 1
-                root.right = traverse(s[begin+1:end-1], 0)
-            return root
-        return traverse(data, 0)
-
-
-
-# Your Codec object will be instantiated and called as such:
-# ser = Codec()
-# deser = Codec()
-# ans = deser.deserialize(ser.serialize(root))
-```
-
-{% page-ref page="construct-binary-tree-from-string.md" %}
-
-{% page-ref page="construct-string-from-binary-tree.md" %}
-
-## Preorder
+## 前序遍歷
 
 ```python
 # Definition for a binary tree node.
@@ -123,9 +40,9 @@ class Codec:
         :rtype: TreeNode
         """
         if not data: return None
-        nodes = data.split(',')
+        nodes = deque(data.split(','))
         def traverse(nodes):
-            rootVal = nodes.pop(0)
+            rootVal = nodes.popleft()
             if rootVal == '#': return None
             root = TreeNode(rootVal)
             root.left = traverse(nodes)
@@ -141,7 +58,7 @@ class Codec:
 # ans = deser.deserialize(ser.serialize(root))
 ```
 
-## Postorder
+## 後序遍歷
 
 ```python
 # Definition for a binary tree node.
@@ -198,7 +115,7 @@ class Codec:
 # ans = deser.deserialize(ser.serialize(root))
 ```
 
-## Iteration \(BFS\)
+## 廣度優先 BFS
 
 ```python
 # Definition for a binary tree node.
