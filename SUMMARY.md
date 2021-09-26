@@ -304,7 +304,7 @@
   * [1485. Clone Binary Tree With Random Pointer](classic-problems/clone-graph/clone-binary-tree-with-random-pointer.md)
 * [Cache 快取問題](classic-problems/cache/README.md)
   * [LRU Cache 最久未使用演算法](classic-problems/cache/lru-cache.md)
-  * [LFU Cache 最近最少使用演算法](classic-problems/cache/lfu-cache.md)
+  * [460. LFU Cache 最近最少使用演算法](classic-problems/cache/lfu-cache.md)
 * [n Sum 問題](classic-problems/nsum/README.md)
   * [1. 2 Sum](classic-problems/nsum/2-sum.md)
   * [15. 3Sum](classic-problems/nsum/3sum.md)

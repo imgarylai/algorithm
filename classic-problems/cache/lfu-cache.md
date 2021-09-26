@@ -1,4 +1,6 @@
-# LFU Cache 最近最少使用演算法
+# 460. LFU Cache 最近最少使用演算法
+
+[460. LFU Cache](https://leetcode.com/problems/lfu-cache/)
 
 LFU 則是另外一個快取機制，主要是讓越常被存取的資料更快地取出，並包含 LRU 的機制，如果超過限制的資源，把最少用掉的刪掉，如果最少用到的資料取出的頻率相同時，則優先刪除更早以前的資料。
 
