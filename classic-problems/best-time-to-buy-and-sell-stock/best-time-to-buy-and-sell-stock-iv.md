@@ -18,12 +18,12 @@ class Solution:
         sells = [0] * k
         
         for price in prices:
-            for j in range(k):
-                if j == 0:
-                    buys[j] = max(buys[j], 0 - price)
+            for i in range(k):
+                if i == 0:
+                    buys[i] = max(buys[i], 0 - price)
                 else:
-                    buys[j] = max(buys[j], sells[j-1] - price)
-                sells[j] = max(sells[j], buys[j] + price)
+                    buys[i] = max(buys[i], sells[i-1] - price)
+                sells[i] = max(sells[i], buys[i] + price)
         return sells[-1]
 ```
 
