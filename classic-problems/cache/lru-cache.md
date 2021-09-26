@@ -101,7 +101,6 @@ class LRUCache:
         self.mark_recent_node(key)
         return self.table[key].val
 
-
     def put(self, key: int, value: int) -> None:
         if key in self.table:
             self.delete_key(key)
