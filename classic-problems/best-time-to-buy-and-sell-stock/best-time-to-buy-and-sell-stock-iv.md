@@ -4,16 +4,26 @@
 
 ```python
 class Solution:
-    def maxProfit(self, prices: List[int]) -> int:
-        firstBuy, firstSell = float('-inf'), 0
-        secondBuy, secondSell = float('-inf'), 0
-
+    def maxProfit(self, k: int, prices: List[int]) -> int:
+        if len(prices) < 2 or k < 1:
+            return 0
+        
+        if k > len(prices)//2:
+            max_profit = 0
+            for i in range(1, len(prices)):
+                max_profit += max(0, prices[i] - prices[i-1])
+            return max_profit
+            
+        buys = [float('-inf')] * k
+        sells = [0] * k
+        
         for price in prices:
-            firstBuy = max(firstBuy, -price)
-            firstSell = max(firstSell, firstBuy + price)
-            secondBuy = max(secondBuy, firstSell - price)
-            secondSell = max(secondSell, secondBuy + price)
-
-        return secondSell
+            for j in range(k):
+                if j == 0:
+                    buys[j] = max(buys[j], 0 - price)
+                else:
+                    buys[j] = max(buys[j], sells[j-1] - price)
+                sells[j] = max(sells[j], buys[j] + price)
+        return sells[-1]
 ```
 
