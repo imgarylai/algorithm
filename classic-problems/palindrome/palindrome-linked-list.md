@@ -58,13 +58,13 @@ class Solution:
 class Solution:
     # 206. Reverse Linked List
     def reverseList(self, head: ListNode) -> ListNode:
-        node = None
+        prev = None
         while head:
             tmp = head.next
-            head.next = node
-            node = head
+            head.next = prev
+            prev = head
             head = tmp
-        return node
+        return prev
     # 876. Middle of the Linked List
     def middleNode(self, head: ListNode) -> ListNode:
         slow = fast = head
