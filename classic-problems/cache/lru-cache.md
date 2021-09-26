@@ -1,4 +1,4 @@
-# LRU Cache 最久未使用演算法
+# 146. LRU Cache 最久未使用演算法
 
 [146. LRU Cache](https://leetcode.com/problems/lru-cache/)
 
