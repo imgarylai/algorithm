@@ -5,25 +5,32 @@
 * [1644. Lowest Common Ancestor of a Binary Tree II](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-ii/)
 * [1650. Lowest Common Ancestor of a Binary Tree III](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/)
 * [1676. Lowest Common Ancestor of a Binary Tree IV](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iv/)
-* 1. 1. 1. 的做法完全一模一樣。
+
+235, 236 的做法完全一模一樣。
 
 ```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
-        nodes = set()
-        nodes.add(p)
-        nodes.add(q)
-        def helper(root, nodes):
-            if not root:
-                return None
-            if root in nodes:
-                return root
-            left = helper(root.left, nodes)
-            right = helper(root.right, nodes)
-            if left and right:
-                return root
-            return left or right
-        return helper(root, nodes)
+        if not root:
+            return None
+        if p == root or q == root:
+            return root
+        
+        left = self.lowestCommonAncestor(root.left, p, q)
+        right = self.lowestCommonAncestor(root.right, p, q)
+        
+        if left and right:
+            return root
+        if not left and not right:
+            return None
+        return left or right
 ```
 
 1650 差在要先找出 Root 在哪
@@ -104,7 +111,7 @@ class Solution:
 
 ## 後序遍歷
 
-```text
+```python
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, x):
