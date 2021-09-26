@@ -113,7 +113,7 @@ class LRUCache:
 
 ## 總結
 
-不知道你同不同意，我前面有說到完全沒有聽過 LRU Cache 的話，很難想得到它的實作細節，但是其實在 Python 裡面有一個內建的方法很簡單，他可以快速的幫你做出 Doubly Linked List + Hash Map 的功能，那就是 `OrderDict` 這是一個有序的 `dict` 。
+不知道你同不同意，我前面有說到完全沒有聽過 LRU Cache 的話，很難想得到它的實作細節，但是其實在 Python 裡面有一個內建的方法很簡單，他可以快速的幫你做出 Doubly Linked List + Hash Map 的功能，那就是 `OrderedDict()` 這是一個有序的 `dict` 。
 
 ```python
 from collections import OrderDict
