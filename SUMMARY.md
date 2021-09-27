@@ -193,6 +193,7 @@
   * [588. Design In-Memory File System](problems/trie/design-in-memory-file-system.md)
   * [642. Design Search Autocomplete System](problems/trie/design-search-autocomplete-system.md)
   * [211. Design Add and Search Words Data Structure](problems/trie/design-add-and-search-words-data-structure.md)
+  * [1268. Search Suggestions System](problems/trie/search-suggestions-system.md)
 * [Two Pointers 雙指針](problems/two-pointers/README.md)
   * [977. Squares of a Sorted Array](problems/two-pointers/977.-squares-of-a-sorted-array.md)
   * [1095. Find in Mountain Array](problems/two-pointers/1095.-find-in-mountain-array.md)

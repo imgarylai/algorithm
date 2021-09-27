@@ -42,24 +42,28 @@ class Solution:
         if not grid or not grid[0]:
             return 0
 
-        m = len(grid)
-        n = len(grid[0])
-
+        rows = len(grid)
+        cols = len(grid[0])
+        directions = [(1, 0), (-1, 0), (0, 1), (0, -1)]
         islands = 0
+        
+        def bfs(i, j):
+            queue = deque([(i, j)])
+            while queue:
+                row, col = queue.popleft()
+                grid[row][col] = '#'
+                for dr, dc in directions:
+                    new_row, new_col = row + dr, col + dc
+                    if 0 <= new_row < rows and 0 <= new_col < cols and grid[new_row][new_col] == "1":
+                        queue.append((new_row, new_col))
+                        grid[new_row][new_col] = '#'
 
-        for i in range(m):
-            for j in range(n):
+        for i in range(rows):
+            for j in range(cols):
                 if grid[i][j] == "1":
                     islands += 1
-                    q = [(i, j)]
-                    while q:
-                        x, y = q.pop(0)
-                        grid[x][y] = '#'
-                        for dx, dy in [(1, 0), (-1, 0), (0, 1), (0, -1)]:
-                            new_x, new_y = x + dx, y + dy
-                            if 0 <= new_x < m and 0 <= new_y < n and grid[new_x][new_y] == "1":
-                                q.append((new_x, new_y))
-                                grid[new_x][new_y] = '#'
+                    bfs(i, j)
+                    
         return islands
 ```
 
