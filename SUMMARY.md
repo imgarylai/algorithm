@@ -223,6 +223,7 @@
   * [713. Subarray Product Less Than K](problems/sliding-window/subarray-product-less-than-k.md)
   * [862. Shortest Subarray with Sum at Least K](problems/sliding-window/shortest-subarray-with-sum-at-least-k.md)
   * [239. Sliding Window Maximum](problems/sliding-window/sliding-window-maximum.md)
+  * [992. Subarrays with K Different Integers](problems/sliding-window/subarrays-with-k-different-integers-1.md)
 * [Bit Manipulation 位元運算](problems/bit-manipulation/README.md)
   * [136. Single Number](problems/bit-manipulation/untitled.md)
   * [7. Reverse Integer](problems/bit-manipulation/reverse-integer.md)
