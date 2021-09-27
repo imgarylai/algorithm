@@ -2,7 +2,7 @@
 
 [140. Word Break II](https://leetcode.com/problems/word-break-ii/)
 
-這一題可以參考 [139. Word Break](../dynamic-programming/word-break.md#hui-su-fa) 。
+這一題可以參考 [139. Word Break](word-break.md#hui-su-fa) 。
 
 ```python
 class Solution:

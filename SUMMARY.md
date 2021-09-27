@@ -41,7 +41,6 @@
   * [79. Word Search](problems/backtrack/word-search/README.md)
     * [212. Word Search II](problems/backtrack/word-search/word-search-ii.md)
   * [425. Word Squares](problems/backtrack/word-squares.md)
-  * [140. Word Break II](problems/backtrack/word-break-ii.md)
   * [1219. Path with Maximum Gold](problems/backtrack/1219.-path-with-maximum-gold.md)
   * [247. Strobogrammatic Number II](problems/backtrack/strobogrammatic-number-ii.md)
 * [Binary Search 二分搜索](problems/binary-search/README.md)
@@ -84,7 +83,6 @@
     * [712. Minimum ASCII Delete Sum for Two Strings](problems/dynamic-programming/longest-common-subsequence/712.-minimum-ascii-delete-sum-for-two-strings.md)
   * [53. Maximum Subarray](problems/dynamic-programming/maximum-subarray.md)
   * [152. Maximum Product Subarray](problems/dynamic-programming/maximum-product-subarray.md)
-  * [139. Word Break](problems/dynamic-programming/word-break.md)
   * [975. Odd Even Jump](problems/dynamic-programming/odd-even-jump.md)
   * [115. Distinct Subsequences](problems/dynamic-programming/115.-distinct-subsequences.md)
   * [416. Partition Equal Subset Sum](problems/dynamic-programming/partition-equal-subset-sum.md)
@@ -125,6 +123,7 @@
   * [726. Number of Atoms](problems/string/number-of-atoms.md)
   * [8. String to Integer \(atoi\)](problems/string/string-to-integer-atoi.md)
   * [12. Integer to Roman](problems/string/12.-integer-to-roman.md)
+  * [696. Count Binary Substrings](problems/string/count-binary-substrings.md)
 * [Tree 樹](problems/tree/README.md)
   * [Breadth-first search 廣度優先搜索](problems/tree/breadthfirst-search/README.md)
     * [111. Minimum Depth of Binary Tree](problems/tree/breadthfirst-search/minimum-depth-of-binary-tree.md)
@@ -350,6 +349,10 @@
 * [Egg Drop 高樓扔雞蛋](classic-problems/egg-drop.md)
 * [Custom sorting 排序技巧](classic-problems/sorting/README.md)
   * [937. Reorder Data in Log Files](classic-problems/sorting/937.-reorder-data-in-log-files.md)
+* [Word Break 字串組合問題](classic-problems/word-break-zi-chuan-zu-he-wen-ti/README.md)
+  * [139. Word Break](classic-problems/word-break-zi-chuan-zu-he-wen-ti/word-break.md)
+  * [140. Word Break II](classic-problems/word-break-zi-chuan-zu-he-wen-ti/word-break-ii.md)
+  * [472. Concatenated Words](classic-problems/word-break-zi-chuan-zu-he-wen-ti/472.-concatenated-words.md)
 
 ## 常見演算法 <a id="common-algorithms"></a>
 
