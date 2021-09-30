@@ -244,14 +244,11 @@
   * [157. Read N Characters Given Read4](problems/other/read-n-characters-given-read4/README.md)
     * [158. Read N Characters Given Read4 II - Call multiple times](problems/other/read-n-characters-given-read4/read-n-characters-given-read4-ii-call-multiple-times.md)
   * [246. Strobogrammatic Number](problems/other/strobogrammatic-number.md)
-
-## 物件導向設計 <a id="object-oriented-design"></a>
-
-* [Object Oriented Design 物件導向設計](object-oriented-design/object-oriented-design/README.md)
-  * [710. Random Pick with Blacklist](object-oriented-design/object-oriented-design/random-pick-with-blacklist.md)
-  * [380. Insert Delete GetRandom O\(1\)](object-oriented-design/object-oriented-design/insert-delete-getrandom-o-1.md)
-  * [271. Encode and Decode Strings](object-oriented-design/object-oriented-design/encode-and-decode-strings.md)
-  * [348. Design Tic-Tac-Toe](object-oriented-design/object-oriented-design/design-tic-tac-toe.md)
+* [Object Oriented Design 物件導向設計](problems/object-oriented-design/README.md)
+  * [710. Random Pick with Blacklist](problems/object-oriented-design/random-pick-with-blacklist.md)
+  * [380. Insert Delete GetRandom O\(1\)](problems/object-oriented-design/insert-delete-getrandom-o-1.md)
+  * [271. Encode and Decode Strings](problems/object-oriented-design/encode-and-decode-strings.md)
+  * [348. Design Tic-Tac-Toe](problems/object-oriented-design/design-tic-tac-toe.md)
 
 ## 經典題目 <a id="classic-problems"></a>
 
