@@ -245,13 +245,13 @@
     * [158. Read N Characters Given Read4 II - Call multiple times](problems/other/read-n-characters-given-read4/read-n-characters-given-read4-ii-call-multiple-times.md)
   * [246. Strobogrammatic Number](problems/other/strobogrammatic-number.md)
 
-## 物件導向設計
+## 物件導向設計 <a id="object-oriented-design"></a>
 
-* [Design 物件導向設計](wu-jian-dao-xiang-she-ji/design/README.md)
-  * [710. Random Pick with Blacklist](wu-jian-dao-xiang-she-ji/design/710.-random-pick-with-blacklist.md)
-  * [380. Insert Delete GetRandom O\(1\)](wu-jian-dao-xiang-she-ji/design/insert-delete-getrandom-o-1.md)
-  * [271. Encode and Decode Strings](wu-jian-dao-xiang-she-ji/design/encode-and-decode-strings.md)
-  * [348. Design Tic-Tac-Toe](wu-jian-dao-xiang-she-ji/design/design-tic-tac-toe.md)
+* [Design 物件導向設計](object-oriented-design/design/README.md)
+  * [710. Random Pick with Blacklist](object-oriented-design/design/random-pick-with-blacklist.md)
+  * [380. Insert Delete GetRandom O\(1\)](object-oriented-design/design/insert-delete-getrandom-o-1.md)
+  * [271. Encode and Decode Strings](object-oriented-design/design/encode-and-decode-strings.md)
+  * [348. Design Tic-Tac-Toe](object-oriented-design/design/design-tic-tac-toe.md)
 
 ## 經典題目 <a id="classic-problems"></a>
 
