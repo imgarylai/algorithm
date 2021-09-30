@@ -247,11 +247,11 @@
 
 ## 物件導向設計 <a id="object-oriented-design"></a>
 
-* [Design 物件導向設計](object-oriented-design/design/README.md)
-  * [710. Random Pick with Blacklist](object-oriented-design/design/random-pick-with-blacklist.md)
-  * [380. Insert Delete GetRandom O\(1\)](object-oriented-design/design/insert-delete-getrandom-o-1.md)
-  * [271. Encode and Decode Strings](object-oriented-design/design/encode-and-decode-strings.md)
-  * [348. Design Tic-Tac-Toe](object-oriented-design/design/design-tic-tac-toe.md)
+* [Object Oriented Design 物件導向設計](object-oriented-design/object-oriented-design/README.md)
+  * [710. Random Pick with Blacklist](object-oriented-design/object-oriented-design/random-pick-with-blacklist.md)
+  * [380. Insert Delete GetRandom O\(1\)](object-oriented-design/object-oriented-design/insert-delete-getrandom-o-1.md)
+  * [271. Encode and Decode Strings](object-oriented-design/object-oriented-design/encode-and-decode-strings.md)
+  * [348. Design Tic-Tac-Toe](object-oriented-design/object-oriented-design/design-tic-tac-toe.md)
 
 ## 經典題目 <a id="classic-problems"></a>
 
