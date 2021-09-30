@@ -2,7 +2,7 @@
 
 [208. Implement Trie \(Prefix Tree\)](https://leetcode.com/problems/implement-trie-prefix-tree/)
 
-```text
+```python
 class TrieNode:
     # Initialize your data structure here.
     def __init__(self):
