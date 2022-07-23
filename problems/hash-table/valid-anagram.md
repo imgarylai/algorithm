@@ -8,6 +8,8 @@ Anagram 有一個特性就是只要是 Anagram 每個字元的字數都會一樣
 
 最後還要再記得檢查，有沒有哪個字元有在第一個單字有出現，但是第二個單字沒有出現。
 
+{% tabs %}
+{% tab title="Python" %}
 ```python
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
@@ -27,4 +29,34 @@ class Solution:
 
         return True
 ```
+{% endtab %}
 
+{% tab title="Java" %}
+```java
+class Solution {
+    public boolean isAnagram(String s, String t) {
+        final Map<String, Integer> map = new HashMap();
+        for (final String c : s.split("")) {
+            map.put(c, map.getOrDefault(c, 0) + 1);
+        }
+        
+        for (final String d : t.split("")) {
+            if (map.containsKey(d)) {
+                map.put(d, map.get(d) - 1);
+            } else {
+                return false;
+            }
+        }
+        
+        for (final Map.Entry<String, Integer> entry : map.entrySet()) {
+            if (entry.getValue() != 0) {
+                return false;
+            }
+        }
+        
+        return true;
+    }
+}
+```
+{% endtab %}
+{% endtabs %}
