@@ -2,7 +2,7 @@
 
 * [簡介](README.md)
 
-## 前言 <a id="introduction"></a>
+## 前言 <a href="#introduction" id="introduction"></a>
 
 * [事前準備](introduction/preparation.md)
 * [資料結構場景](introduction/data-structure.md)
@@ -10,7 +10,7 @@
   * [時間複雜度](introduction/complexity/time-complexity.md)
   * [空間複雜度](introduction/complexity/space-complexity.md)
 
-## 分類題型 <a id="problems"></a>
+## 分類題型 <a href="#problems" id="problems"></a>
 
 * [Array 陣列](problems/array/README.md)
   * [88. Merge Sorted Array](problems/array/merge-sorted-array.md)
@@ -22,6 +22,7 @@
   * [498. Diagonal Traverse](problems/array/diagonal-traverse.md)
   * [238. Product of Array Except Self](problems/array/product-of-array-except-self.md)
   * [HackerRank Counting Valleys](problems/array/hackerrank-counting-valleys.md)
+  * [1089. Duplicate Zeros](problems/array/1089.-duplicate-zeros.md)
 * [Backtrack 回溯法](problems/backtrack/README.md)
   * [51. & 52. N Queens](problems/backtrack/51.-and-52.-n-queens.md)
   * [37. Sudoku Solver](problems/backtrack/sudoku-solver.md)
@@ -52,7 +53,7 @@
   * [374. Guess Number Higher or Lower](problems/binary-search/guess-number-higher-or-lower-1.md)
   * [704. Binary Search](problems/binary-search/binary-search.md)
   * [34. Find First and Last Position of Element in Sorted Array](problems/binary-search/find-first-and-last-position-of-element-in-sorted-array.md)
-  * [69. Sqrt\(x\)](problems/binary-search/69.-sqrt-x.md)
+  * [69. Sqrt(x)](problems/binary-search/69.-sqrt-x.md)
   * [367. Valid Perfect Square](problems/binary-search/valid-perfect-square.md)
   * [374. Guess Number Higher or Lower](problems/binary-search/guess-number-higher-or-lower.md)
   * [278. First Bad Version](problems/binary-search/first-bad-version.md)
@@ -121,7 +122,7 @@
   * [43. Multiply Strings](problems/string/multiply-strings.md)
   * [344. Reverse String](problems/string/reverse-string.md)
   * [726. Number of Atoms](problems/string/number-of-atoms.md)
-  * [8. String to Integer \(atoi\)](problems/string/string-to-integer-atoi.md)
+  * [8. String to Integer (atoi)](problems/string/string-to-integer-atoi.md)
   * [12. Integer to Roman](problems/string/12.-integer-to-roman.md)
   * [696. Count Binary Substrings](problems/string/count-binary-substrings.md)
 * [Tree 樹](problems/tree/README.md)
@@ -186,7 +187,7 @@
   * [113. Path Sum II](problems/tree/path-sum-ii.md)
   * [437. Path Sum III](problems/tree/path-sum-iii.md)
 * [Trie 字典樹](problems/trie/README.md)
-  * [208. Implement Trie \(Prefix Tree\)](problems/trie/implement-trie-prefix-tree.md)
+  * [208. Implement Trie (Prefix Tree)](problems/trie/implement-trie-prefix-tree.md)
   * [677. Map Sum Pairs](problems/trie/677.-map-sum-pairs.md)
   * [648. Replace Words](problems/trie/648.-replace-words.md)
   * [588. Design In-Memory File System](problems/trie/design-in-memory-file-system.md)
@@ -246,11 +247,11 @@
   * [246. Strobogrammatic Number](problems/other/strobogrammatic-number.md)
 * [Object Oriented Design 物件導向設計](problems/object-oriented-design/README.md)
   * [710. Random Pick with Blacklist](problems/object-oriented-design/random-pick-with-blacklist.md)
-  * [380. Insert Delete GetRandom O\(1\)](problems/object-oriented-design/insert-delete-getrandom-o-1.md)
+  * [380. Insert Delete GetRandom O(1)](problems/object-oriented-design/insert-delete-getrandom-o-1.md)
   * [271. Encode and Decode Strings](problems/object-oriented-design/encode-and-decode-strings.md)
   * [348. Design Tic-Tac-Toe](problems/object-oriented-design/design-tic-tac-toe.md)
 
-## 經典題目 <a id="classic-problems"></a>
+## 經典題目 <a href="#classic-problems" id="classic-problems"></a>
 
 * [Best Time to Buy and Sell Stock 股票買賣問題](classic-problems/best-time-to-buy-and-sell-stock/README.md)
   * [121. Best Time to Buy and Sell Stock](classic-problems/best-time-to-buy-and-sell-stock/best-time-to-buy-and-sell-stock.md)
@@ -353,24 +354,23 @@
   * [140. Word Break II](classic-problems/word-break-zi-chuan-zu-he-wen-ti/word-break-ii.md)
   * [472. Concatenated Words](classic-problems/word-break-zi-chuan-zu-he-wen-ti/472.-concatenated-words.md)
 
-## 常見演算法 <a id="common-algorithms"></a>
+## 常見演算法 <a href="#common-algorithms" id="common-algorithms"></a>
 
 * [Sorting 排序](common-algorithms/sorting/README.md)
-  * [Merge Sort \(Accepted\)](common-algorithms/sorting/merge-sort-accepted.md)
-  * [Quick Sort \(Accepted\)](common-algorithms/sorting/quick-sort-accepted.md)
-  * [Heap Sort \(Accepted\)](common-algorithms/sorting/heap-sort-accepted.md)
-  * [Bubble Sort \(TLE\)](common-algorithms/sorting/bubble-sort-tle.md)
-  * [Insertion Sort \(TLE\)](common-algorithms/sorting/insertion-sort-tle.md)
-  * [Selection Sort \(TLE\)](common-algorithms/sorting/selection-sort-tle.md)
+  * [Merge Sort (Accepted)](common-algorithms/sorting/merge-sort-accepted.md)
+  * [Quick Sort (Accepted)](common-algorithms/sorting/quick-sort-accepted.md)
+  * [Heap Sort (Accepted)](common-algorithms/sorting/heap-sort-accepted.md)
+  * [Bubble Sort (TLE)](common-algorithms/sorting/bubble-sort-tle.md)
+  * [Insertion Sort (TLE)](common-algorithms/sorting/insertion-sort-tle.md)
+  * [Selection Sort (TLE)](common-algorithms/sorting/selection-sort-tle.md)
 * [Shuffle Array 打亂陣列內的元素](common-algorithms/shuffle-an-array.md)
 * [池塘抽樣](common-algorithms/reservoir-sampling/README.md)
   * [382. Linked List Random Node](common-algorithms/reservoir-sampling/linked-list-random-node.md)
   * [398. Random Pick Index](common-algorithms/reservoir-sampling/random-pick-index.md)
 
-## Python 技巧 <a id="python-skills"></a>
+## Python 技巧 <a href="#python-skills" id="python-skills"></a>
 
 * [陣列複製](python-skills/copy.md)
 * [矩陣操作](python-skills/matrix-operations/README.md)
   * [向矩陣中的四個方向移動](python-skills/matrix-operations/moving-four-directions-in-matrix.md)
   * [矩陣遍歷的方法](python-skills/matrix-operations/ways-to-traverse-in-matrix.md)
-
