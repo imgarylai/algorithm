@@ -3,7 +3,7 @@
 [224. Basic Calculator](https://leetcode.com/problems/basic-calculator/)
 
 {% hint style="info" %}
-先做 [227. Basic Calculator II](227.-basic-calculator-ii.md) 和 [394. Decode String](../../problems/stack/394.-decode-string.md)
+先做 [227. Basic Calculator II](basic-calculator-ii.md) 和 [394. Decode String](../../problems/stack/394.-decode-string.md)
 {% endhint %}
 
 ```python
@@ -34,4 +34,3 @@ class Solution:
             return sum(stack)
         return helper(deque(list(s)))
 ```
-
