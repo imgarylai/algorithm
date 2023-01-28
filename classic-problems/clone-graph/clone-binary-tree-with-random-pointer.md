@@ -2,7 +2,7 @@
 
 [1485. Clone Binary Tree With Random Pointer](https://leetcode.com/problems/clone-binary-tree-with-random-pointer/)
 
-概念和 [138. Copy List with Random Pointer](copy-list-with-random-pointer.md) 一模一樣。
+概念和 [138. Copy List with Random Pointer](138.-copy-list-with-random-pointer.md) 一模一樣。
 
 ```python
 # Definition for Node.
