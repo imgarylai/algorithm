@@ -1,3 +1,7 @@
+---
+layout: landing
+---
+
 # 10. Regular Expression Matching
 
 [10. Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/)
@@ -29,7 +33,7 @@ class Solution:
 
 1. 當 `s[i] == p[j] or p[j] == '.'` :
    1. `p[j+1] != '*'` 兩個指針往前走。
-   2. `p[j+1] == '*'` 可以匹配零到多個字元，例如匹配零個字元：`s = "aa", p = "a*aa"`  匹配多個字元：`s = "aaa", p = "a*"` 。
+   2. `p[j+1] == '*'` 可以匹配零到多個字元，例如匹配零個字元：`s = "aa", p = "a*aa"` 匹配多個字元：`s = "aaa", p = "a*"` 。
 2. 當 `s[i] != p[j]` :
    1. `p[j+1] != '*'`不匹配，回傳 False
    2. `p[j+1] == '*'` 只能匹配零個字元，例如：`s = "cc", p = "ca*c"` 。
@@ -164,4 +168,3 @@ class Solution:
                         dp[i][j] = dp[i - 1][j - 1]
         return dp[-1][-1]
 ```
-
