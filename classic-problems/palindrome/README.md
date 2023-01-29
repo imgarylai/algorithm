@@ -8,7 +8,7 @@
 
 當字串是奇數個個數時，我們可以從最外面往內去比較，最後一直比較到最中間的字元的時候，一定會剛好上剩下一個字元，這個時候就可以不用考慮了，因為當只有一個字元時，這個字元也一定符合回文的條件，或是我們如果要從字串的中間往外去比較，那我們也可以不用考慮最中間的字元，只要從中間出發，繼續向外擴展就好。
 
-題目可以先從 [125. Valid Palindrome](125.-valid-palindrome.md) 和先試著寫出怎麼判斷回文。接著再試著練習 [5. Longest Palindromic Substring](longest-palindromic-substring.md) 。
+題目可以先從 [125. Valid Palindrome](valid-palindrome.md) 和先試著寫出怎麼判斷回文。接著再試著練習 [5. Longest Palindromic Substring](longest-palindromic-substring.md) 。
 
-比較直覺的題目就會是注意兩邊的指針在跨越中間點時，就是回文檢查完成之時，而比較困難的題目會是我們要在題目中，不斷的考慮今天的題目會是偶數個字元還是奇數個字元：[9. Palindrome Number](9.-palindrome-number.md) 。
+比較直覺的題目就會是注意兩邊的指針在跨越中間點時，就是回文檢查完成之時，而比較困難的題目會是我們要在題目中，不斷的考慮今天的題目會是偶數個字元還是奇數個字元：[9. Palindrome Number](palindrome-number.md) 。
 

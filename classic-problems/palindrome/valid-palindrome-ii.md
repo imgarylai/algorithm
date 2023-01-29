@@ -2,7 +2,7 @@
 
 [680. Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/)
 
-這一題是 [125. Valid Palindrome](125.-valid-palindrome.md) 的變形，考的是如果說最多可以修改一個字元，那是否可以形成回文？
+這一題是 [125. Valid Palindrome](valid-palindrome.md) 的變形，考的是如果說最多可以修改一個字元，那是否可以形成回文？
 
 在 LeetCode 很多的題目裡面，有時候修改和刪除其實是等價的（參考編輯距離的題目 [72. Edit Distance](../../problems/dynamic-programming/edit-distance.md)）
 

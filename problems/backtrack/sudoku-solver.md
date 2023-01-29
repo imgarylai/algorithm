@@ -2,7 +2,7 @@
 
 [37. Sudoku Solver](https://leetcode.com/problems/sudoku-solver/)
 
-這一題和 [51. & 52. N Queens](51.-and-52.-n-queens.md) 的本質不會差太多。
+這一題和 [51. & 52. N Queens](n-queens.md) 的本質不會差太多。
 
 如我在前言裡面所提到的，回溯法的本質和窮舉有關，思考排列組合窮舉的方式可以幫助我們思考回溯法如何的走訪。
 

@@ -2,7 +2,7 @@
 
 [452. Minimum Number of Arrows to Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/)
 
-可以先看 [435. Non-overlapping Intervals](435.-non-overlapping-intervals.md) 的最後一個解法
+可以先看 [435. Non-overlapping Intervals](non-overlapping-intervals.md) 的最後一個解法
 
 這個題目是希望我們可以用最少的箭矢去射破所有氣球，如果我們算出有幾個**「不重疊的區間」**，就代表我們需要幾支箭矢。
 

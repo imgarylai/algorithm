@@ -2,7 +2,7 @@
 
 [732. My Calendar III](https://leetcode.com/problems/my-calendar-iii/)
 
-題目在考 [253. Meeting Rooms II](meeting-rooms-ii-1.md) 。
+題目在考 [253. Meeting Rooms II](meeting-rooms-ii.md) 。
 
 ```python
 class MyCalendarThree:

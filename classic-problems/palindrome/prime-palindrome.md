@@ -2,7 +2,7 @@
 
 [866. Prime Palindrome](https://leetcode.com/problems/prime-palindrome/)
 
-[9. Palindrome Number](9.-palindrome-number.md) 和 [204. Count Primes](../../problems/math/count-primes.md) 的結合。
+[9. Palindrome Number](palindrome-number.md) 和 [204. Count Primes](../../problems/math/count-primes.md) 的結合。
 
 ```python
 class Solution:
